@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body
+{
+
+    background-color: black !important;
+
+}
+
+hr
+{
+
+    color: black;
+    height: 5px;
+    background: black;
+    border-radius: 50px;
+
+}
+
+h1
+{
+
+    font-family: Montserrat;
+
+}
+
+h2
+{
+
+    font-family: Montserrat;
+
+}
+
+h3
+{
+
+    font-family: Montserrat;
+
+}
+
+
+.ualink:link
+{
+
+    color: black;
+    text-decoration: none;
+
+}
+  
+
+.ualink:visited
+{
+
+    color: black;
+
+}
+
+
+.ualink:hover
+{
+
+    background: linear-gradient(180deg, rgba(0, 87, 183) 51%, rgba(255, 215, 0) 51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+}
+  
+
+.ualink:active
+{
+
+    color: blue;
+
+}
+
+.ualinkbg:hover
+{
+
+
+
+}
+
+.socialbutton
+{
+
+    width: 60px;
+
+}
+
+.socialicon
+{
+
+    width: 60px;
+
+}
+
+.servicebutton
+{
+
+    color: white;
+    font-family: Montserrat;
+    background-color: black;
+    height: 60px;
+    width: 370px;
+    border-radius: 20px;
+    padding: 10px;
+    border-width: 0px;
+
+
+}
+
+.ndbg
+{
+
+    border-radius: 50px;
+    padding: 50px;
+    margin: auto;
+    margin-top: 40px;    
+
+}
+
+.loc
+{
+
+    height: 20px;
+    margin-bottom: -4px;
+
+}
+
+.lang
+{
+
+    height: 40px;
+    margin-left: 10px;
+    margin-right: 10px;
+
+}
