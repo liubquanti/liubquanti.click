@@ -17,11 +17,11 @@ hr
 
 }
 
-h1
+.h1
 {
 
     font-family: Montserrat;
-
+    font-size: 25px;
 }
 
 h2
@@ -38,45 +38,35 @@ h3
 
 }
 
-
-.ualink:link
+.ualink
 {
-
+    
     color: black;
+    transition: content 1s;
     text-decoration: none;
 
 }
-  
 
-.ualink:visited
-{
-
-    color: black;
-
-}
 
 
 .ualink:hover
 {
 
-    background: linear-gradient(180deg, rgba(0, 87, 183) 51%, rgba(255, 215, 0) 51%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    
 
 }
-  
 
-.ualink:active
+.loc:hover
 {
 
-    color: blue;
+
 
 }
 
 .ualinkbg:hover
 {
 
-
+    
 
 }
 
@@ -84,24 +74,38 @@ h3
 {
 
     width: 60px;
+    text-decoration: none;
 
 }
 
 .socialicon
 {
 
+    transition: margin-bottom 0.3s;
+
     width: 60px;
+    margin-bottom: 5px;
+
+}
+
+.socialicon:hover
+{
+    margin-bottom: 0px;
+    filter: contrast(80%);
 
 }
 
 .servicebutton
 {
 
+    transition: width 0.5s;
+
+    
     color: white;
     font-family: Montserrat;
     background-color: black;
     height: 60px;
-    width: 370px;
+    width: 100%;
     border-radius: 20px;
     padding: 10px;
     border-width: 0px;
@@ -109,13 +113,23 @@ h3
 
 }
 
+.servicebutton:hover
+{
+
+
+    width: 80%;
+    filter: contrast(80%);
+
+}
+
 .ndbg
 {
 
     border-radius: 50px;
-    padding: 50px;
+    padding: 20px;
     margin: auto;
-    margin-top: 40px;    
+    margin-top: 40px;
+    width: 70%;
 
 }
 
