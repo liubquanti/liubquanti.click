@@ -3,17 +3,18 @@
 body
 {
 
-    background-color: black !important;
+    background-color: #26527d !important;
 
 }
 
 hr
 {
 
-    color: black;
+    color: #d2e9ff;
     height: 5px;
-    background: black;
+    background: #d2e9ff;
     border-radius: 50px;
+    border: 0;
 
 }
 
@@ -22,12 +23,14 @@ hr
 
     font-family: Montserrat;
     font-size: 25px;
+    color: #26527d;
 }
 
 h2
 {
 
     font-family: Montserrat;
+    color: #26527d;
 
 }
 
@@ -35,6 +38,30 @@ h3
 {
 
     font-family: Montserrat;
+    color: #26527d;
+
+}
+
+li
+{
+
+    display: inline;
+    font-family: Montserrat;
+    color: #d2e9ff;
+
+}
+
+li:hover
+{
+
+
+
+}
+
+ul
+{
+    
+
 
 }
 
@@ -52,7 +79,7 @@ h3
 .ualink:hover
 {
 
-    
+
 
 }
 
@@ -103,7 +130,7 @@ h3
     
     color: white;
     font-family: Montserrat;
-    background-color: black;
+    background-color: #3675b5;
     height: 60px;
     width: 100%;
     border-radius: 20px;
@@ -128,7 +155,6 @@ h3
     border-radius: 50px;
     padding: 20px;
     margin: auto;
-    margin-top: 40px;
     width: 70%;
 
 }
