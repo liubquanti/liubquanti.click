@@ -3,175 +3,133 @@
 body
 {
 
-    background-color: #26527d !important;
-
-}
-
-hr
-{
-
-    color: #d2e9ff;
-    height: 5px;
-    background: #d2e9ff;
-    border-radius: 50px;
-    border: 0;
-
-}
-
-.h1
-{
-
+    background-color: #243b53;
     font-family: Montserrat;
-    font-size: 25px;
-    color: #26527d;
+    color: #d9e2ec;
+
+}
+
+h1
+{
+
+    text-align: center;
+    margin: auto;
+
 }
 
 h2
 {
 
-    font-family: Montserrat;
-    color: #26527d;
+    text-align: center;
+    margin: auto;
 
 }
 
 h3
 {
 
-    font-family: Montserrat;
-    color: #26527d;
+    text-align: center;
+    width: max-content;
+    padding-inline: 1%;
+    margin: auto;
 
 }
 
-li
+hr
 {
 
-    display: inline;
-    font-family: Montserrat;
-    color: #d2e9ff;
+    height: 5px;
+    width: 50%;
+    border: 0px;
+    background-color: #243b53;
+    border-radius: 50px;
 
 }
 
-li:hover
+a
 {
 
-
-
-}
-
-ul
-{
-    
-
-
-}
-
-.ualink
-{
-    
-    color: black;
-    transition: content 1s;
-    text-decoration: none;
-
-}
-
-
-
-.ualink:hover
-{
-
-
-
-}
-
-.loc:hover
-{
-
-
-
-}
-
-.ualinkbg:hover
-{
-
-    
-
-}
-
-.socialbutton
-{
-
-    width: 60px;
-    text-decoration: none;
-
-}
-
-.socialicon
-{
-
-    transition: margin-bottom 0.3s;
-
-    width: 60px;
-    margin-bottom: 5px;
-
-}
-
-.socialicon:hover
-{
-    margin-bottom: 0px;
-    filter: contrast(80%);
-
-}
-
-.servicebutton
-{
-
-    transition: width 0.5s;
-
-    
     color: white;
-    font-family: Montserrat;
-    background-color: #3675b5;
-    height: 60px;
-    width: 100%;
-    border-radius: 20px;
-    padding: 10px;
-    border-width: 0px;
+    text-decoration: none;
+
+}
+
+.navigation
+{
+
+    text-align: center;
+    margin-top: 5%;
+
+}
+
+.navigation-link
+{
+
+    transition: color 0.5s;
+
+    margin-inline: 1%;
+    color: #9fb3c8;
+    padding: 1%;
+
+}
+
+.navigation-link:hover
+{
+
+    color: white;
+
+}
+
+.navigation-link-on
+{
+
+    margin-inline: 1%;
+    color: #d9e2ec;
+    pointer-events: none;
+    background-color: #486581;
+    border-radius: 50px;
+    padding: 1%;
+
+}
+
+.block
+{
+
+    background-color: #486581;
+    width: 50%;
+    margin: auto;
+    margin-top: 5%;
+    border-radius: 50px;
+    padding: 5%;
 
 
 }
 
-.servicebutton:hover
+.avatar
 {
 
-
-    width: 80%;
-    filter: contrast(80%);
+    display: block;
+    width: 40%;
+    border-radius: 50%;
+    margin: auto;
+    
 
 }
 
-.ndbg
+.ukraine
 {
+
+    transition: background-color 0.5s;
 
     border-radius: 50px;
-    padding: 20px;
-    margin: auto;
-    width: 70%;
 
 }
 
-.loc
+
+.ukraine:hover
 {
 
-    height: 20px;
-    margin-bottom: -4px;
-
-}
-
-.lang
-{
-
-    height: 40px;
-    margin-left: 10px;
-    margin-right: 10px;
-
+    background-color: #243b53;
+    border-radius: 50px;
+    
 }
