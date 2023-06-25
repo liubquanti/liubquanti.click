@@ -30,7 +30,6 @@ h3
 
     text-align: center;
     width: max-content;
-    padding-inline: 1%;
     margin: auto;
 
 }
@@ -39,7 +38,7 @@ hr
 {
 
     height: 5px;
-    width: 50%;
+    width: 300px;
     border: 0px;
     background-color: #243b53;
     border-radius: 50px;
@@ -49,7 +48,7 @@ hr
 a
 {
 
-    color: white;
+    color: #d9e2ec;
     text-decoration: none;
 
 }
@@ -58,7 +57,8 @@ a
 {
 
     text-align: center;
-    margin-top: 5%;
+    margin-top: 50px;
+    margin-bottom: 50px;
 
 }
 
@@ -67,9 +67,9 @@ a
 
     transition: color 0.5s;
 
-    margin-inline: 1%;
+    margin-inline: 10px;
     color: #9fb3c8;
-    padding: 1%;
+    padding: 10px;
 
 }
 
@@ -83,12 +83,12 @@ a
 .navigation-link-on
 {
 
-    margin-inline: 1%;
+    margin-inline: 10px;
     color: #d9e2ec;
     pointer-events: none;
     background-color: #486581;
     border-radius: 50px;
-    padding: 1%;
+    padding: 10px;
 
 }
 
@@ -96,12 +96,11 @@ a
 {
 
     background-color: #486581;
-    width: 50%;
+    width: 600px;
     margin: auto;
-    margin-top: 5%;
     border-radius: 50px;
-    padding: 5%;
-
+    padding: 20px;
+    margin-bottom: 20px;
 
 }
 
@@ -134,12 +133,76 @@ a
     
 }
 
+.under
+{
+
+    text-align: center;
+
+}
+
+.lang-panel
+{
+    
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.lang
+{
+
+    width: 50px;
+    margin-inline: 10px;
+
+}
+
 @media only screen and (max-width: 600px)
 {
+    
+    hr
+    {
+
+        width: 200px;
+
+    }
+    
     .block
     {
 
         width: 80%;
+
+    }
+
+    .navigation
+    {
+
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    }
+
+    .navigation-link
+    {
+
+        margin-inline: 0px;
+        padding: 10px;
+
+    }
+
+    .navigation-link-on
+    {
+
+        margin-inline: 0px;
+        padding: 10px;
+
+    }
+
+    .avatar
+    {
+
+        width: 60%;
 
     }
 }
