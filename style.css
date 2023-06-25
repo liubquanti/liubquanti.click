@@ -6,7 +6,21 @@ body
     background-color: #243b53;
     font-family: Montserrat;
     color: #d9e2ec;
-    overflow: hidden;
+
+}
+
+body::-webkit-scrollbar
+{
+
+    display: none;
+
+}
+
+body
+{
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
 }
 
