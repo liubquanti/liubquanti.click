@@ -194,6 +194,52 @@ a
     border-radius: 50px;
 
 }
+
+.socialpanel
+{
+
+    width: fit-content;
+    margin: auto;
+
+}
+
+.socialgroup
+{
+
+    display: inline-block;
+
+}
+
+.socialbutton
+{
+
+    transition: background-color 0.5s;
+
+    background-color: #243b53;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    width: 200px;
+
+
+}
+
+.socialbutton:hover
+{
+
+    background-color: #334e68;
+
+}
+
+.socialicon
+{
+
+    width: 20px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+
+}
+
 .under
 {
 
@@ -215,8 +261,17 @@ a
 .lang
 {
 
+    transition: transform 0.5s;
+
     width: 40px;
     margin-inline: 10px;
+
+}
+
+.lang:hover
+{
+
+    transform: rotate(10deg);
 
 }
 
@@ -268,6 +323,21 @@ a
     {
 
         width: 60%;
+
+    }
+
+    .socialpanel
+    {
+
+        width: ;
+        margin: auto;
+
+    }
+
+    .socialgroup
+    {
+
+        display: inline;
 
     }
 }
