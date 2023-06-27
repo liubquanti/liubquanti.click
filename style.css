@@ -70,6 +70,10 @@ a
 
 }
 
+p {
+    text-indent: 20px; /* Відступ першого рядка в пікселях */
+    }
+
 .navigation
 {
 
@@ -170,7 +174,7 @@ a
 .text
 {
 
-    text-align: center;
+    text-align: c;
     width: 80%;
     margin: auto;
 
@@ -191,6 +195,13 @@ a
 
     color: white;
     border-radius: 50px;
+
+}
+
+.text-p
+{
+
+    color: #334e68;
 
 }
 
@@ -271,6 +282,16 @@ a
 {
 
     transform: rotate(10deg);
+
+}
+
+.embed-v
+{
+
+    display: block;
+    border-radius: 30px;
+    margin: auto;
+    width: 100%;
 
 }
 
