@@ -46,7 +46,6 @@ h3
 {
 
     text-align: center;
-    width: max-content;
     margin: auto;
     padding: 5px;
 
@@ -275,6 +274,36 @@ a
 
 }
 
+.base
+{
+
+    transition: transform 0.5s;
+
+    display: block;
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    transform: rotate(0deg);
+    margin: auto;
+
+}
+
+.base:hover
+{
+
+    transform: rotate(5deg)
+
+
+
+}
+
+.base:target
+{
+
+    width: 100%;
+
+}
+
 
 
 @media only screen and (max-width: 600px)
@@ -337,6 +366,13 @@ a
     {
 
         display: inline;
+
+    }
+
+    .base
+    {
+
+        width: 200px;
 
     }
 }
