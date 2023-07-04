@@ -154,7 +154,7 @@ p {
 }
 
 
-.ukraine:hover
+.ukraine:hover + body
 {
 
     background-color: #243b53;
@@ -175,6 +175,15 @@ p {
 {
 
     text-align: c;
+    width: 80%;
+    margin: auto;
+
+}
+
+.text-h
+{
+
+    text-align: center;
     width: 80%;
     margin: auto;
 
