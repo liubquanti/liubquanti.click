@@ -1,0 +1,408 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body
+{
+
+    background-color: #243b53;
+    font-family: Montserrat;
+    color: #d9e2ec;
+
+}
+
+body::-webkit-scrollbar
+{
+
+    display: none;
+
+}
+
+body
+{
+
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+h1
+{
+
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+
+}
+
+h2
+{
+
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+
+}
+
+h3
+{
+
+    text-align: center;
+    margin: auto;
+    padding: 5px;
+
+}
+
+hr
+{
+
+    height: 5px;
+    width: 300px;
+    border: 0px;
+    background-color: #243b53;
+    border-radius: 50px;
+
+}
+
+a
+{
+
+    color: #d9e2ec;
+    text-decoration: none;
+
+}
+
+p {
+    text-indent: 20px; /* Відступ першого рядка в пікселях */
+    }
+
+.navigation
+{
+
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+}
+
+.navigation-link
+{
+
+    transition: color 0.5s;
+
+    margin-inline: 10px;
+    color: #9fb3c8;
+    padding: 10px;
+
+}
+
+.navigation-link:hover
+{
+
+    color: white;
+
+}
+
+.navigation-link-on
+{
+
+    margin-inline: 10px;
+    color: #d9e2ec;
+    pointer-events: none;
+    background-color: #486581;
+    border-radius: 50px;
+    padding: 10px;
+
+}
+
+.block
+{
+
+    background-color: #486581;
+    width: 600px;
+    margin: auto;
+    border-radius: 50px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.avatar
+{
+
+    display: block;
+    width: 200px;
+    border-radius: 50%;
+    margin: auto;
+    border: 5px solid;
+    border-color: #243b53;
+
+}
+
+.ukraine-panel
+{
+    margin: auto;
+    width: fit-content;
+
+}
+
+.ukraine
+{
+
+    transition: background-color 0.5s;
+
+    border-radius: 50px;
+
+}
+
+
+.ukraine:hover
+{
+
+    background-color: #243b53;
+    border-radius: 50px;
+    
+}
+
+.location
+{
+
+    width: 20px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+
+}
+
+.text
+{
+
+    text-align: c;
+    width: 80%;
+    margin: auto;
+
+}
+
+.text-h
+{
+
+    text-align: center;
+    width: 80%;
+    margin: auto;
+
+}
+
+.text-a
+{
+
+    transition: color 0.5s;
+
+    color: #9fb3c8;
+    border-radius: 50px;
+
+}
+
+.text-a:hover
+{
+
+    color: white;
+    border-radius: 50px;
+
+}
+
+.text-p
+{
+
+    color: #334e68;
+
+}
+
+.socialpanel
+{
+
+    width: fit-content;
+    margin: auto;
+
+}
+
+.socialgroup
+{
+
+    display: inline-block;
+
+}
+
+.socialbutton
+{
+
+    transition: background-color 0.5s;
+
+    background-color: #243b53;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 50px;
+    width: 200px;
+
+
+}
+
+.socialbutton:hover
+{
+
+    background-color: #334e68;
+
+}
+
+.socialicon
+{
+
+    width: 20px;
+    margin-bottom: -3px;
+    margin-right: 5px;
+
+}
+
+.under
+{
+
+    text-align: center;
+    margin-bottom: 20px;
+
+}
+
+.lang-panel
+{
+    
+    width: fit-content;
+    margin: auto;
+
+
+}
+
+
+.lang
+{
+
+    transition: transform 0.5s;
+
+    width: 40px;
+    margin-inline: 10px;
+
+}
+
+.lang:hover
+{
+
+    transform: rotate(10deg);
+
+}
+
+.embed-v
+{
+
+    display: block;
+    border-radius: 30px;
+    margin: auto;
+    width: 100%;
+
+}
+
+.base
+{
+
+    transition: transform 0.5s;
+
+    display: block;
+    padding: 10px;
+    width: 300px;
+    border-radius: 20px;
+    transform: rotate(0deg);
+    margin: auto;
+
+}
+
+.base:hover
+{
+
+    transform: rotate(5deg)
+
+
+
+}
+
+.base:target
+{
+
+    width: 100%;
+
+}
+
+
+
+@media only screen and (max-width: 600px)
+{
+    
+    hr
+    {
+
+        width: 200px;
+
+    }
+    
+    .block
+    {
+
+        width: 80%;
+
+    }
+
+    .navigation
+    {
+
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+
+    }
+
+    .navigation-link
+    {
+
+        margin-inline: 0px;
+        padding: 10px;
+
+    }
+
+    .navigation-link-on
+    {
+
+        margin-inline: 0px;
+        padding: 10px;
+
+    }
+
+    .avatar
+    {
+
+        width: 60%;
+
+    }
+
+    .socialpanel
+    {
+
+        margin: auto;
+
+    }
+
+    .socialgroup
+    {
+
+        display: inline;
+
+    }
+
+    .base
+    {
+
+        width: 200px;
+
+    }
+}
