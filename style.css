@@ -3,7 +3,7 @@
 body
 {
 
-    background-color: #243b53;
+    background-color: #161718;
     font-family: Montserrat;
     color: #d9e2ec;
 
@@ -70,9 +70,12 @@ a
 
 }
 
-p {
+p
+{
+
     text-indent: 20px; /* Відступ першого рядка в пікселях */
-    }
+
+}
 
 .navigation
 {
@@ -108,7 +111,7 @@ p {
     color: #d9e2ec;
     pointer-events: none;
     background-color: #486581;
-    border-radius: 50px;
+    border-radius: 10px;
     padding: 10px;
 
 }
@@ -116,10 +119,10 @@ p {
 .block
 {
 
-    background-color: #486581;
+    background-color: #101010;
     width: 600px;
     margin: auto;
-    border-radius: 50px;
+    border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
 
@@ -149,7 +152,7 @@ p {
 
     transition: background-color 0.5s;
 
-    border-radius: 50px;
+    border-radius: 10px;
 
 }
 
@@ -158,7 +161,7 @@ p {
 {
 
     background-color: #243b53;
-    border-radius: 50px;
+    border-radius: 10px;
     
 }
 
@@ -237,7 +240,7 @@ p {
     background-color: #243b53;
     margin: 10px;
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 10px;
     width: 200px;
 
 
