@@ -402,6 +402,31 @@ p
 
 }
 
+.item
+{
+
+    display: block;
+    width: 100px;
+    border-radius: 50px;
+    margin: auto;
+
+}
+
+.item-table
+{
+
+    width: 100%
+
+}
+
+.item-text
+{
+
+    text-align: center;
+    margin: 10px;
+
+}
+
 
 
 @media only screen and (max-width: 600px)
