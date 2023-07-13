@@ -116,7 +116,7 @@ p
 
 }
 
-.block
+.block-1
 {
 
     background-color: #101010;
@@ -126,6 +126,47 @@ p
     padding: 20px;
     margin-bottom: 20px;
 
+    animation: Slide_Up 0.5s ease;
+
+}
+
+.block-2
+{
+
+    background-color: #101010;
+    width: 600px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    animation: Slide_Up 1s ease;
+
+}
+
+.block-3
+{
+
+    background-color: #101010;
+    width: 600px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    animation: Slide_Up 1.5s ease;
+
+}
+
+@keyframes Slide_Up {
+    0% {
+        transform: translateY(100px);
+        opacity: 0%;
+    }
+    100% {
+        transform: translateY(0px);
+        opacity: 100%;
+    }
 }
 
 .avatar
@@ -177,7 +218,6 @@ p
 .text
 {
 
-    text-align: c;
     width: 80%;
     margin: auto;
 
@@ -337,6 +377,31 @@ p
 
 }
 
+.ul-base
+{
+
+    text-align: center;
+
+}
+
+.ul-link
+{
+
+    
+    text-align: center;
+    width: fit-content;
+
+}
+
+.ul-link:hover
+{
+
+    transition: background-color 0.3s;
+
+    background-color: #243b53;
+
+}
+
 
 
 @media only screen and (max-width: 600px)
@@ -349,7 +414,28 @@ p
 
     }
     
-    .block
+    .block-1
+    {
+
+        width: 80%;
+
+    }
+
+    .block-2
+    {
+
+        width: 80%;
+
+    }
+
+    .block-3
+    {
+
+        width: 80%;
+
+    }
+
+    .block-4
     {
 
         width: 80%;
