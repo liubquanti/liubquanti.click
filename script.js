@@ -10,3 +10,9 @@ function toggleAudio() {
         photo.classList.remove("playing");
     }
 }
+
+function resetPhoto() {
+    var photo = document.querySelector(".item-meme");
+    photo.classList.remove("playing");
+    photo.style.transform = "rotate(0deg)";
+}
