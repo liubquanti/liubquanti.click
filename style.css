@@ -9,6 +9,22 @@ body
 
 }
 
+body.pulse {
+    animation: pulse 0.5s linear infinite;
+}
+
+@keyframes pulse {
+    0% {
+        background-color: #161718;
+    }
+    50% {
+        background-color: #363636;
+    }
+    100% {
+        background-color: #161718;
+    }
+}
+
 body::-webkit-scrollbar
 {
 
@@ -237,11 +253,11 @@ audio
 
 @keyframes Slide_Up {
     0% {
-        transform: translateY(100px);
+        transform: translateX(100px);
         opacity: 0%;
     }
     100% {
-        transform: translateY(0px);
+        transform: translateX(0px);
         opacity: 100%;
     }
 }
@@ -500,7 +516,11 @@ audio
     padding: 5px;
     cursor: pointer;
 
-    animation: rotation 10s linear infinite paused;
+    animation-name: rotation;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-play-state: paused;
 
 }
 
