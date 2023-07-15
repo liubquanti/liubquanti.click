@@ -77,6 +77,13 @@ p
 
 }
 
+audio
+{
+
+    color: red;
+
+}
+
 .navigation
 {
 
@@ -477,8 +484,21 @@ p
 
     display: block;
     width: 100px;
-    border-radius: 50px;
+    border-radius: 50%;
     margin: auto;
+    padding: 5px;
+
+}
+
+.item-meme
+{
+
+    display: block;
+    width: 100px;
+    border-radius: 50%;
+    margin: auto;
+    padding: 5px;
+    cursor: pointer;
 
 }
 
@@ -494,6 +514,13 @@ p
 
     text-align: center;
     margin: 10px;
+
+}
+
+.item-sq
+{
+
+    width: 50%;
 
 }
 
