@@ -18,25 +18,7 @@ body::-webkit-scrollbar
 
 }
 
-h1
-{
-
-    text-align: center;
-    margin: auto;
-    padding: 5px;
-
-}
-
-h2
-{
-
-    text-align: center;
-    margin: auto;
-    padding: 5px;
-
-}
-
-h3
+h1, h2, h3
 {
 
     text-align: center;
@@ -144,72 +126,27 @@ audio
 
 .block-4
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 2s ease;
-
 }
 
 .block-5
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 2.5s ease;
-
 }
 
 .block-6
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 3s ease;
-
 }
 
 .block-7
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 3.5s ease;
-
 }
 
 .block-8
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 4s ease;
-
 }
 
 @keyframes Slide_Up {
@@ -469,14 +406,7 @@ audio
 
 .item-meme
 {
-
-    display: block;
-    width: 100px;
-    border-radius: 50%;
-    margin: auto;
-    padding: 5px;
     cursor: pointer;
-
     animation: rotation 10s linear infinite paused;
 
 }
@@ -528,54 +458,13 @@ audio
 
     }
     
-    .block-1
+    .block-1, block-2, .block-3, .block-4, .block-5, .block-6, .block-7
     {
 
         width: 80%;
 
     }
 
-    .block-2
-    {
-
-        width: 80%;
-
-    }
-
-    .block-3
-    {
-
-        width: 80%;
-
-    }
-
-    .block-4
-    {
-
-        width: 80%;
-
-    }
-
-    .block-5
-    {
-
-        width: 80%;
-
-    }
-
-    .block-6
-    {
-
-        width: 80%;
-
-    }
-
-    .block-7
-    {
-
-        width: 80%;
-
-    }
 
     .navigation
     {
