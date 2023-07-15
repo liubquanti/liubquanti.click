@@ -500,6 +500,21 @@ audio
     padding: 5px;
     cursor: pointer;
 
+    animation: rotation 10s linear infinite paused;
+
+}
+
+.playing {
+    animation-play-state: running;
+}
+
+@keyframes rotation {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .item-table
