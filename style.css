@@ -475,22 +475,14 @@ audio
 
     }
 
-    .navigation-link
+    .navigation-link, .navigation-link-on
     {
 
         margin-inline: 0px;
         padding: 10px;
 
     }
-
-    .navigation-link-on
-    {
-
-        margin-inline: 0px;
-        padding: 10px;
-
-    }
-
+    
     .avatar
     {
 
@@ -518,11 +510,4 @@ audio
         width: 200px;
 
     }
-
-    .base:hover
-    {
-
-
-
-    }
-}
+    .base:hover{}
