@@ -6,6 +6,8 @@ body
     background-color: #161718;
     font-family: Montserrat;
     color: #d9e2ec;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 
 }
 
@@ -13,14 +15,6 @@ body::-webkit-scrollbar
 {
 
     display: none;
-
-}
-
-body
-{
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
 
 }
 
@@ -123,46 +117,29 @@ audio
 
 }
 
-.block-1
+.block
 {
-
     background-color: #101010;
     width: 600px;
     margin: auto;
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+}
 
+.block-1
+{
     animation: Slide_Up 0.5s ease;
-
 }
 
 .block-2
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 1s ease;
-
 }
 
 .block-3
 {
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
     animation: Slide_Up 1.5s ease;
-
 }
 
 .block-4
