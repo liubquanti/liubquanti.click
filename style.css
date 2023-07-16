@@ -558,6 +558,16 @@ audio
     width: 50%;
 
 }
+.background-image {
+    position: fixed;
+    top: 400px;
+    bottom: 0;
+    left: 0;
+    width: 200px;
+    height: 150px;
+    pointer-events: none;
+    z-index: -1;
+  }
 
 
 
@@ -677,6 +687,13 @@ audio
     {
 
 
+
+    }
+
+    .background-image
+    {
+
+        display: none;
 
     }
 }
