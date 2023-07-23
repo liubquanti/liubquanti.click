@@ -558,7 +558,10 @@ audio
     width: 50%;
 
 }
-.background-image {
+
+.background-image
+{
+
     position: fixed;
     top: 400px;
     bottom: 0;
@@ -567,7 +570,10 @@ audio
     height: 150px;
     pointer-events: none;
     z-index: -1;
-  }
+
+}
+
+
 
 
 
