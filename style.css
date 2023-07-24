@@ -573,9 +573,68 @@ audio
 
 }
 
+.other-block-1
+{
 
+    background-image: url(photos/setup.jpg);
+    background-size: cover;
+    background-position: center;
 
+    width: 90%;
+    height: 200px;
+    background-color: white;
+    border: solid 5px;
+    border-color: #486581;
+    border-radius: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
 
+}
+
+.other-block-2
+{
+
+    background-image: url(photos/soft.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 90%;
+    height: 200px;
+    background-color: white;
+    border: solid 5px;
+    border-color: #486581;
+    border-radius: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+}
+
+.other-block-3
+{
+
+    background-image: url(photos/game.jpg);
+    background-size: cover;
+    background-position: center;
+
+    width: 90%;
+    height: 200px;
+    background-color: white;
+    border: solid 5px;
+    border-color: #486581;
+    border-radius: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+
+}
 
 @media only screen and (max-width: 600px)
 {
