@@ -636,6 +636,14 @@ audio
 
 }
 
+.game-ico
+{
+
+    height: 300px;
+    border-radius: 20px;
+
+}
+
 @media only screen and (max-width: 600px)
 {
     
