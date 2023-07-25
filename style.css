@@ -308,11 +308,20 @@ audio
 
 }
 
+.text-extra
+{
+
+    width: 80%;
+    margin: auto;
+
+}
+
 .text
 {
 
     width: 80%;
     margin: auto;
+    text-align: center;
 
 }
 
@@ -639,8 +648,10 @@ audio
 .game-ico
 {
 
+    display: block;
     height: 300px;
     border-radius: 20px;
+    margin: auto;
 
 }
 
