@@ -395,6 +395,57 @@ audio
 
 }
 
+.socialgroup-plus
+{
+
+    display: inline;
+
+}
+
+.socialbutton-plus
+{
+
+    transition: background-color 0.5s;
+
+    background-color: #243b53;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 20px;
+
+    text-align: center;
+    float: inline-start;
+
+}
+
+.socialbutton-plus:hover
+{
+
+    background-color: #334e68;
+
+}
+
+.socialbutton-minus
+{
+
+    transition: background-color 0.5s;
+
+    background-color: #243b53;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    width: 150px;
+    float: inline-end;
+
+}
+
+.socialbutton-minus:hover
+{
+
+    background-color: #334e68;
+
+}
+
 .socialicon
 {
 
