@@ -414,7 +414,7 @@ audio
     width: 20px;
 
     text-align: center;
-    float: inline-start;
+    float: right;
 
 }
 
@@ -435,7 +435,6 @@ audio
     padding: 10px;
     border-radius: 10px;
     width: 150px;
-    float: inline-end;
 
 }
 
