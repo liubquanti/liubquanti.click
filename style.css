@@ -865,8 +865,8 @@ audio
     .tgembed
     {
 
-        height: 0px;
-        width: 0px;
-
+        width: 50%;
+        margin-left: 4%;
+    
     }
 }
