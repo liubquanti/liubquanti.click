@@ -388,6 +388,19 @@ audio
 
 }
 
+.socialbutton-center
+{
+
+    transition: background-color 0.5s;
+
+    background-color: #243b53;
+    padding: 10px;
+    border-radius: 10px;
+    width: 200px;
+
+
+}
+
 .socialbutton:hover
 {
 
