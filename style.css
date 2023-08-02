@@ -551,13 +551,6 @@ audio
 
 }
 
-.base:target
-{
-
-    width: 100%;
-
-}
-
 .ul-base
 {
 
@@ -854,11 +847,26 @@ audio
         width: 200px;
 
     }
+    
+    .base:hover
+    {
+
+        transform: rotate(0deg)
+
+    }
 
     .background-image
     {
 
         display: none;
+
+    }
+
+    .tgembed
+    {
+
+        height: 0px;
+        width: 0px;
 
     }
 }
