@@ -740,6 +740,22 @@ audio
 
 }
 
+.gamepanel
+{
+
+    width: fit-content;
+    margin: auto;
+
+}
+
+.gamegroup
+{
+
+    display: inline-block;
+    margin: 20px;
+
+}
+
 
 
 @media only screen and (max-width: 600px)
@@ -872,6 +888,20 @@ audio
     {
 
         display: none;
+
+    }
+
+    .gamepanel
+    {
+
+        margin: auto;
+
+    }
+
+    .gamegroup
+    {
+
+        display: inline;
 
     }
 
