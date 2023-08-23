@@ -6,6 +6,15 @@ body
     background-color: #161718;
     font-family: Montserrat;
     color: #d9e2ec;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+}
+
+body::-webkit-scrollbar
+{
+
+    display: none;
 
 }
 
@@ -25,40 +34,7 @@ body.pulse {
     }
 }
 
-body::-webkit-scrollbar
-{
-
-    display: none;
-
-}
-
-body
-{
-
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-
-}
-
-h1
-{
-
-    text-align: center;
-    margin: auto;
-    padding: 5px;
-
-}
-
-h2
-{
-
-    text-align: center;
-    margin: auto;
-    padding: 5px;
-
-}
-
-h3
+h1, h2, h3
 {
 
     text-align: center;
@@ -89,14 +65,7 @@ a
 p
 {
 
-    text-indent: 20px; /* Відступ першого рядка в пікселях */
-
-}
-
-audio
-{
-
-    color: red;
+    text-indent: 20px;
 
 }
 
@@ -139,117 +108,47 @@ audio
 
 }
 
-.block-1
-{
-
+.block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8 {
     background-color: #101010;
     width: 600px;
     margin: auto;
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+}
 
+.block-1 {
     animation: Slide_Up 0.5s ease;
-
 }
 
-.block-2
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-2 {
     animation: Slide_Up 1s ease;
-
 }
 
-.block-3
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-3 {
     animation: Slide_Up 1.5s ease;
-
 }
 
-.block-4
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-4 {
     animation: Slide_Up 2s ease;
-
 }
 
-.block-5
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-5 {
     animation: Slide_Up 2.5s ease;
-
 }
 
-.block-6
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-6 {
     animation: Slide_Up 3s ease;
-
 }
 
-.block-7
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-7 {
     animation: Slide_Up 3.5s ease;
-
 }
 
-.block-8
-{
-
-    background-color: #101010;
-    width: 600px;
-    margin: auto;
-    border-radius: 20px;
-    padding: 20px;
-    margin-bottom: 20px;
-
+.block-8 {
     animation: Slide_Up 4s ease;
-
 }
+
 
 @keyframes Slide_Up {
     0% {
@@ -313,7 +212,6 @@ audio
 
     width: 80%;
     margin: auto;
-
 }
 
 .text
@@ -496,41 +394,6 @@ audio
 
 }
 
-.under
-{
-
-    text-align: center;
-    margin-bottom: 20px;
-
-}
-
-.lang-panel
-{
-    
-    width: fit-content;
-    margin: auto;
-
-
-}
-
-
-.lang
-{
-
-    transition: transform 0.5s;
-
-    width: 40px;
-    margin-inline: 10px;
-
-}
-
-.lang:hover
-{
-
-    transform: rotate(10deg);
-
-}
-
 .embed-v
 {
 
@@ -561,31 +424,6 @@ audio
     transform: rotate(5deg)
 
 
-
-}
-
-.ul-base
-{
-
-    text-align: center;
-
-}
-
-.ul-link
-{
-
-    
-    text-align: center;
-    width: fit-content;
-
-}
-
-.ul-link:hover
-{
-
-    transition: background-color 0.3s;
-
-    background-color: #243b53;
 
 }
 
@@ -667,68 +505,34 @@ audio
 
 }
 
-.other-block-1
-{
+.other-block-1, .other-block-2, .other-block-3 {
+    background-size: cover;
+    background-position: center;
+    width: 90%;
+    height: 200px;
+    background-color: white;
+    border: solid 5px;
+    border-color: #486581;
+    border-radius: 50px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
 
+.other-block-1 {
     background-image: url(photos/setup.jpg);
-    background-size: cover;
-    background-position: center;
-
-    width: 90%;
-    height: 200px;
-    background-color: white;
-    border: solid 5px;
-    border-color: #486581;
-    border-radius: 50px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-
 }
 
-.other-block-2
-{
-
+.other-block-2 {
     background-image: url(photos/soft.jpg);
-    background-size: cover;
-    background-position: center;
-
-    width: 90%;
-    height: 200px;
-    background-color: white;
-    border: solid 5px;
-    border-color: #486581;
-    border-radius: 50px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-
 }
 
-.other-block-3
-{
-
+.other-block-3 {
     background-image: url(photos/game.jpg);
-    background-size: cover;
-    background-position: center;
-
-    width: 90%;
-    height: 200px;
-    background-color: white;
-    border: solid 5px;
-    border-color: #486581;
-    border-radius: 50px;
-    margin: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 20px;
-
 }
+
 
 .game-ico
 {
@@ -768,54 +572,10 @@ audio
 
     }
     
-    .block-1
-    {
-
+    .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7 {
         width: 80%;
-
     }
-
-    .block-2
-    {
-
-        width: 80%;
-
-    }
-
-    .block-3
-    {
-
-        width: 80%;
-
-    }
-
-    .block-4
-    {
-
-        width: 80%;
-
-    }
-
-    .block-5
-    {
-
-        width: 80%;
-
-    }
-
-    .block-6
-    {
-
-        width: 80%;
-
-    }
-
-    .block-7
-    {
-
-        width: 80%;
-
-    }
+    
 
     .navigation
     {
