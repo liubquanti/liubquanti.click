@@ -34,7 +34,7 @@ body.pulse {
     }
 }
 
-h1, h2, h3
+h1, h2, h3, h4
 {
 
     text-align: center;
@@ -299,7 +299,7 @@ p
 
 }
 
-.socialbutton:hover
+.socialbutton:hover, .socialbutton-center:hover
 {
 
     background-color: #334e68;
