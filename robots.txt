@@ -1,6 +1,3 @@
 User-agent: *
-Disallow: /private/
-Disallow: /admin/
-Allow: /public/
-Disallow: /sitemap_new.xml
+Disallow:
 Sitemap: https://liubquanti.click/sitemap.xml
