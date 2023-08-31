@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /sitemap.xml
+Sitemap: https://liubquanti.click/sitemap.xml
