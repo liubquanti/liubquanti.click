@@ -1,11 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+:root{
+    --background: #161718;
+    --background-pulse: #363636;
+    --text: #d9e2ec;
+    --main: #243b53;
+    --block: #101010;
+    --main-hover: #334e68;
+    --link: #d9e2ec;
+    --navigation: #9fb3c8;
+    --navigation-hover: #ffffff;
+    --navigation-on: #486581;
+}
+
+
 body
 {
 
-    background-color: #161718;
+    background-color: var(--background);
     font-family: Montserrat;
-    color: #d9e2ec;
+    color: var(--text);
     -ms-overflow-style: none;
     scrollbar-width: none;
 
@@ -24,13 +38,13 @@ body.pulse {
 
 @keyframes pulse {
     0% {
-        background-color: #161718;
+        background-color: var(--background);
     }
     50% {
-        background-color: #363636;
+        background-color: var(--background-pulse);
     }
     100% {
-        background-color: #161718;
+        background-color: var(--background);
     }
 }
 
@@ -49,7 +63,7 @@ hr
     height: 5px;
     width: 300px;
     border: 0px;
-    background-color: #243b53;
+    background-color: var(--main);
     border-radius: 50px;
 
 }
@@ -57,7 +71,7 @@ hr
 a
 {
 
-    color: #d9e2ec;
+    color: var(--text);
     text-decoration: none;
 
 }
@@ -84,7 +98,7 @@ p
     transition: color 0.5s;
 
     margin-inline: 10px;
-    color: #9fb3c8;
+    color: var(--navigation);
     padding: 10px;
 
 }
@@ -92,7 +106,7 @@ p
 .navigation-link:hover
 {
 
-    color: white;
+    color: var(--navigation-hover);
 
 }
 
@@ -100,16 +114,16 @@ p
 {
 
     margin-inline: 10px;
-    color: #d9e2ec;
+    color: var(--text);
     pointer-events: none;
-    background-color: #486581;
+    background-color: var(--navigation-on);
     border-radius: 10px;
     padding: 10px;
 
 }
 
 .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8 {
-    background-color: #101010;
+    background-color: var(--block);
     width: 600px;
     margin: auto;
     border-radius: 20px;
@@ -169,7 +183,7 @@ p
     border-radius: 50%;
     margin: auto;
     border: 5px solid;
-    border-color: #243b53;
+    border-color: var(--main);
 
 }
 
@@ -193,7 +207,7 @@ p
 .ukraine:hover
 {
 
-    background-color: #243b53;
+    background-color: var(--main);
     border-radius: 10px;
     
 }
@@ -237,7 +251,7 @@ p
 
     transition: color 0.5s;
 
-    color: #9fb3c8;
+    color: var(--navigation);
     border-radius: 50px;
 
 }
@@ -245,7 +259,7 @@ p
 .text-a:hover
 {
 
-    color: white;
+    color: var(--navigation-hover);
     border-radius: 50px;
 
 }
@@ -253,7 +267,7 @@ p
 .text-p
 {
 
-    color: #334e68;
+    color: var(--main-hover);
 
 }
 
@@ -277,7 +291,7 @@ p
 
     transition: background-color 0.5s;
 
-    background-color: #243b53;
+    background-color: var(--main);
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -291,7 +305,7 @@ p
 
     transition: background-color 0.5s;
 
-    background-color: #243b53;
+    background-color: var(--main);
     padding: 10px;
     border-radius: 10px;
     width: 200px;
@@ -302,7 +316,7 @@ p
 .socialbutton:hover, .socialbutton-center:hover
 {
 
-    background-color: #334e68;
+    background-color: var(--main-hover);
 
 }
 
@@ -318,7 +332,7 @@ p
 
     transition: background-color 0.5s;
 
-    background-color: #243b53;
+    background-color: var(--main);
     padding: 10px;
     border-radius: 10px;
     width: 20px;
@@ -337,7 +351,7 @@ p
 
     transition: background-color 0.5s;
 
-    background-color: #243b53;
+    background-color: var(--main);
     padding: 10px;
     border-radius: 10px;
     width: 20px;
@@ -354,14 +368,14 @@ p
 .socialbutton-plus:hover
 {
 
-    background-color: #334e68;
+    background-color: var(--main-hover);
 
 }
 
 .socialbutton-plus-2:hover
 {
 
-    background-color: #334e68;
+    background-color: var(--main-hover);
 
 }
 
@@ -370,7 +384,7 @@ p
 
     transition: background-color 0.5s;
 
-    background-color: #243b53;
+    background-color: var(--main);
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
@@ -381,7 +395,7 @@ p
 .socialbutton-minus:hover
 {
 
-    background-color: #334e68;
+    background-color: var(--main-hover);
 
 }
 
@@ -510,9 +524,9 @@ p
     background-position: center;
     width: 90%;
     height: 200px;
-    background-color: white;
+    background-color: var(--navigation-hover);
     border: solid 5px;
-    border-color: #486581;
+    border-color: var(--navigation-on);
     border-radius: 50px;
     margin: auto;
     display: flex;
