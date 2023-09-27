@@ -12,6 +12,11 @@
     --navigation-hover: #ffffff;
 }
 
+#particles-js{
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+}
 
 body
 {
