@@ -10,7 +10,6 @@
     --link: #d9e2ec;
     --navigation: #9fb3c8;
     --navigation-hover: #ffffff;
-    --navigation-on: #486581;
 }
 
 
@@ -116,7 +115,7 @@ p
     margin-inline: 10px;
     color: var(--text);
     pointer-events: none;
-    background-color: var(--navigation-on);
+    background-color: var(--main);
     border-radius: 10px;
     padding: 10px;
 
@@ -207,7 +206,7 @@ p
 .ukraine:hover
 {
 
-    background-color: var(--main);
+    background-color: var(--main-hover);
     border-radius: 10px;
     
 }
@@ -526,7 +525,7 @@ p
     height: 200px;
     background-color: var(--navigation-hover);
     border: solid 5px;
-    border-color: var(--navigation-on);
+    border-color: var(--main);
     border-radius: 50px;
     margin: auto;
     display: flex;
