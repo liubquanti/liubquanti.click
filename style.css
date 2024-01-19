@@ -277,7 +277,9 @@ p
 
 .socialpanel
 {
+    
     display: flex;
+    justify-content: center;
     width: fit-content;
     margin: auto;
 
@@ -573,14 +575,17 @@ p
     .socialpanel
     {
 
+        display: flex;
+        width: fit-content;
         margin: auto;
+        flex-wrap: wrap;
 
     }
 
-    .socialgroup
+    .button
     {
 
-        display: inline;
+        margin: 11px;
 
     }
 
@@ -623,6 +628,34 @@ p
     {
 
         display: inline;
+
+    }
+
+    .other-panel
+    {
+
+        justify-content: center;
+
+    }
+
+    .other-block
+    {
+
+        
+        
+    }
+
+    .other-block-icon
+    {
+
+        
+
+    }
+
+    .other-block-in
+    {
+
+
 
     }
 
