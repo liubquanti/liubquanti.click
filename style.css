@@ -277,20 +277,13 @@ p
 
 .socialpanel
 {
-
+    display: flex;
     width: fit-content;
     margin: auto;
 
 }
 
-.socialgroup
-{
-
-    display: inline-block;
-
-}
-
-.socialbutton
+.button
 {
 
     transition: background-color 0.5s;
@@ -299,104 +292,13 @@ p
     margin: 10px;
     padding: 10px;
     border-radius: 10px;
-    width: 200px;
-
-
-}
-
-.socialbutton-center
-{
-
-    transition: background-color 0.5s;
-
-    background-color: var(--main);
-    padding: 10px;
-    border-radius: 10px;
-    width: 200px;
-
-
-}
-
-.socialbutton:hover, .socialbutton-center:hover
-{
-
-    background-color: var(--main-hover);
-
-}
-
-.socialgroup-plus
-{
-
-    display: inline;
-
-}
-
-.socialbutton-plus
-{
-
-    transition: background-color 0.5s;
-
-    background-color: var(--main);
-    padding: 10px;
-    border-radius: 10px;
+    height: 20px;
     width: 20px;
 
-    text-align: center;
-    float: right;
-
-    margin: 0px;
-    margin-right: 10px;
-    margin-top: 10px;
 
 }
 
-.socialbutton-plus-2
-{
-
-    transition: background-color 0.5s;
-
-    background-color: var(--main);
-    padding: 10px;
-    border-radius: 10px;
-    width: 20px;
-
-    text-align: center;
-    float: right;
-
-    margin: 0px;
-    margin-right: 10px;
-    margin-bottom: 10px;
-
-}
-
-.socialbutton-plus:hover
-{
-
-    background-color: var(--main-hover);
-
-}
-
-.socialbutton-plus-2:hover
-{
-
-    background-color: var(--main-hover);
-
-}
-
-.socialbutton-minus
-{
-
-    transition: background-color 0.5s;
-
-    background-color: var(--main);
-    margin: 10px;
-    padding: 10px;
-    border-radius: 10px;
-    width: 150px;
-
-}
-
-.socialbutton-minus:hover
+.button:hover, .button-center:hover
 {
 
     background-color: var(--main-hover);
@@ -523,32 +425,73 @@ p
 
 }
 
-.other-block-1, .other-block-2, .other-block-3 {
-    background-size: cover;
-    background-position: center;
-    width: 90%;
-    height: 200px;
-    background-color: var(--navigation-hover);
-    border: solid 5px;
-    border-color: var(--main);
-    border-radius: 50px;
+.other-panel
+{
+
     margin: auto;
     display: flex;
-    align-items: center;
+    flex-wrap: wrap;
     justify-content: center;
-    margin: 20px;
+    position: relative;
+
 }
 
-.other-block-1 {
-    background-image: url(photos/setup.jpg);
+.other-block {
+
+    transition: background-color 0.5s;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+    height: 150px;
+    background-color: var(--main);
+    border: solid 5px;
+    border-color: var(--main);
+    border-radius: 30px;
+    margin: 10px;
+    padding: 10px;
+    
 }
 
-.other-block-2 {
-    background-image: url(photos/soft.jpg);
+.other-block-in
+{
+
+
+
 }
 
-.other-block-3 {
-    background-image: url(photos/game.jpg);
+.other-block-label
+{
+
+    transition: color 0.5s;
+
+    font-weight: bold;
+    color: var(--navigation);
+    
+
+}
+
+.other-block:hover
+{
+
+    background-color: var(--main-hover);
+    color: var(--navigation-hover);
+
+    .other-block-label
+    {
+
+        color: var(--navigation-hover);
+
+    }
+
+}
+
+.other-block-icon
+{
+
+    width: 40%;
+
 }
 
 
@@ -641,7 +584,7 @@ p
 
     }
 
-    .socialbutton-plus
+    .button-plus
     {
 
         margin-top: 0px;

@@ -38,3 +38,12 @@ window.addEventListener('load', function() {
 
     document.getElementById("age").textContent = age;
 });
+
+function changeTitle(newTitle) {
+    document.getElementById('socialTitle').innerHTML = '<h3>' + newTitle + '</h3>';
+}
+
+function restoreTitle() {
+    var titleElement = document.getElementById('socialTitle');
+    titleElement.innerHTML = '<h3> Соцмережі </h3>';
+  }
