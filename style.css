@@ -456,13 +456,6 @@ p
     
 }
 
-.other-block-in
-{
-
-
-
-}
-
 .other-block-label
 {
 
@@ -520,6 +513,19 @@ p
 
     display: inline-block;
     margin: 20px;
+
+}
+
+.spotify
+{
+
+    border-radius: 12px;
+    border: none;
+    width: 90%;
+    height: 152px;
+    padding: 10px;
+    margin: auto;
+    display: block;
 
 }
 
@@ -637,26 +643,4 @@ p
         justify-content: center;
 
     }
-
-    .other-block
-    {
-
-        
-        
-    }
-
-    .other-block-icon
-    {
-
-        
-
-    }
-
-    .other-block-in
-    {
-
-
-
-    }
-
 }
