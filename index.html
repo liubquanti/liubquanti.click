@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,7 +8,9 @@
     <link rel="icon" href="/icons/pageico.png" type="image/x-icon">
     <title>liubquanti • Головна</title>
     <script src="script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
+
 <body>
     <div class="navigation">
         <a href="" class="navigation-link-on">Головна</a>
@@ -15,59 +18,31 @@
         <a href="/education/" class="navigation-link">Освіта</a>
         <a href="/other/" class="navigation-link">Інше</a>
     </div>
-    <div class="block-1">
-        <div>
-            <img src="https://i.postimg.cc/qRSJLQK0/image.png" alt="" class="avatar">
-            <h1>Олег Любченко</h1>
-            <div class="ukraine-panel">
-                <a href="https://www.google.com.ua/maps/place/Ukraine" target="_blank" class="ukraine">
-                    <h3 class="ukraine">
-                        <img src="/icons/location.png" alt="" class="location">Україна
-                    </h3>
-                </a>
-            </div>
-            <div id="socialTitle">
-                <h3>Соцмережі</h3>
-            </div>
-            <div class="socialpanel">
-                <a href="https://www.youtube.com/@liubquanti" target="_blank" onmouseover="changeTitle('YouTube')" onmouseout="restoreTitle()">
-                    <div class="button">
-                        <img src="/icons/youtube.png" alt="" class="socialicon">
-                    </div>
-                </a>
-                <a href="https://www.twitch.tv/liubquanti" target="_blank" onmouseover="changeTitle('Twitch')" onmouseout="restoreTitle()">
-                    <div class="button">
-                        <img src="/icons/twitch.png" alt="" class="socialicon">   
-                    </div>
-                </a>
-                <a href="https://www.instagram.com/liubquanti/" target="_blank" onmouseover="changeTitle('Instagram')" onmouseout="restoreTitle()">
-                    <div class="button">
-                        <img src="/icons/instagram.png" alt="" class="socialicon">    
-                    </div>
-                </a>
-                <a href="https://t.me/liubquanti" target="_blank" onmouseover="changeTitle('Telegram')" onmouseout="restoreTitle()">
-                    <div class="button">
-                        <img src="/icons/telegram.png" alt="" class="socialicon">  
-                    </div>
-                </a>
-                <a href="http://tiktok.com/@liubquanti" target="_blank" onmouseover="changeTitle('TikTok')" onmouseout="restoreTitle()">
-                    <div class="button">
-                        <img src="/icons/tiktok.png" alt="" class="socialicon">  
-                    </div>
-                </a>
-                <a href="https://github.com/liubquanti" target="_blank" onmouseover="changeTitle('GitHub')" onmouseout="restoreTitle()">
-                    <div class="button">
-                        <img src="/icons/github.png" alt="" class="socialicon"> 
-                    </div>
-                </a>
-            </div>
+    <div class="banner">
+    </div>
+    <div class="profile">
+        <div class="avatar">
+
         </div>
+        <name id="name">
+
+        </name>
+        <proffession id="proffession">
+            
+        </proffession>
+        <country id="country">
+            
+        </country>
+        <about id="about">
+            
+        </about>
     </div>
     <div class="block-2">
         <h3>Про мене</h3>
         <hr>
         <div class="text">
-            Привіт, мене звати Олег. Мені <span id="age"></span> років. Народився я в Україні, в місті <a href="https://www.google.com.ua/maps/place/Poltava" target="_blank" class="text-a">Полтава</a>.
+            Привіт, мене звати Олег. Мені <span id="age"></span> років. Народився я в Україні, в місті <a
+                href="https://www.google.com.ua/maps/place/Poltava" target="_blank" class="text-a">Полтава</a>.
         </div>
     </div>
     <div class="block-3">
@@ -90,6 +65,48 @@
                 </div>
             </a>
         </div>
+        <div id="socialTitle">
+            <h3>Соцмережі</h3>
+        </div>
+        <div class="socialpanel">
+            <a href="https://www.youtube.com/@liubquanti" target="_blank" onmouseover="changeTitle('YouTube')"
+                onmouseout="restoreTitle()">
+                <div class="button">
+                    <img src="/icons/youtube.png" alt="" class="socialicon">
+                </div>
+            </a>
+            <a href="https://www.twitch.tv/liubquanti" target="_blank" onmouseover="changeTitle('Twitch')"
+                onmouseout="restoreTitle()">
+                <div class="button">
+                    <img src="/icons/twitch.png" alt="" class="socialicon">
+                </div>
+            </a>
+            <a href="https://www.instagram.com/liubquanti/" target="_blank" onmouseover="changeTitle('Instagram')"
+                onmouseout="restoreTitle()">
+                <div class="button">
+                    <img src="/icons/instagram.png" alt="" class="socialicon">
+                </div>
+            </a>
+            <a href="https://t.me/liubquanti" target="_blank" onmouseover="changeTitle('Telegram')"
+                onmouseout="restoreTitle()">
+                <div class="button">
+                    <img src="/icons/telegram.png" alt="" class="socialicon">
+                </div>
+            </a>
+            <a href="http://tiktok.com/@liubquanti" target="_blank" onmouseover="changeTitle('TikTok')"
+                onmouseout="restoreTitle()">
+                <div class="button">
+                    <img src="/icons/tiktok.png" alt="" class="socialicon">
+                </div>
+            </a>
+            <a href="https://github.com/liubquanti" target="_blank" onmouseover="changeTitle('GitHub')"
+                onmouseout="restoreTitle()">
+                <div class="button">
+                    <img src="/icons/github.png" alt="" class="socialicon">
+                </div>
+            </a>
+        </div>
     </div>
 </body>
+
 </html>

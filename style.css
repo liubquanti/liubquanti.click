@@ -1,28 +1,49 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://db.onlinewebfonts.com/c/bc243781a951cf39176535269f463ae3?family=SamsungGothicCondensedWeb+Bold');
 
-:root{
-    --background: #161718;
-    --background-pulse: #363636;
-    --text: #d9e2ec;
-    --main: #243b53;
-    --block: #101010;
-    --main-hover: #334e68;
-    --link: #d9e2ec;
-    --navigation: #9fb3c8;
-    --navigation-hover: #ffffff;
+@font-face {
+    font-family: 'Samsung-Bold';
+    src: url('/fonts/SamsungSans-Bold.ttf');
 }
 
-#particles-js{
-    height: 100%;
-    position: absolute;
-    z-index: -1;
+@font-face {
+    font-family: 'Samsung-Light';
+    src: url('/fonts/SamsungSans-Light.ttf');
+}
+
+@font-face {
+    font-family: 'Samsung-Medium';
+    src: url('/fonts/SamsungSans-Medium.ttf');
+}
+
+@font-face {
+    font-family: 'Samsung-Regular';
+    src: url('/fonts/SamsungSans-Regular.ttf');
+}
+
+
+@font-face {
+    font-family: 'Samsung-Thin';
+    src: url('/fonts/SamsungSans-Thin.ttf');
+}
+
+:root{
+    --background: #010102;
+    --background-pulse: #363636;
+    --text: #fafaff;
+    --link: #d9e2ec;
+    --block: #17171a;
+    --main: #3a3a3d;
+    --main-hover: #575759;
+    --navigation: #a6caef;
+    --navigation-hover: #ffffff;
 }
 
 body
 {
 
     background-color: var(--background);
-    font-family: Montserrat;
+    font-family: Samsung-Regular;
     color: var(--text);
     -ms-overflow-style: none;
     scrollbar-width: none;
@@ -58,6 +79,7 @@ h1, h2, h3, h4
     text-align: center;
     margin: auto;
     padding: 5px;
+    font-family: Samsung-Bold;
 
 }
 
@@ -84,6 +106,29 @@ p
 {
 
     text-indent: 20px;
+
+}
+
+name {
+
+    font-size: 30px;
+    font-family: Samsung-Medium;
+
+}
+
+proffession {
+
+    font-size: 20px;
+    font-family: Samsung-Medium;
+    padding: 2px;
+
+}
+
+country {
+
+    font-size: 20px;
+    font-family: Samsung-Medium;
+    padding: 2px;
 
 }
 
@@ -126,6 +171,49 @@ p
 
 }
 
+.banner {
+
+    background-color: var(--block);
+    height: 100px;
+    width: 600px;
+    margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    background-image: url('/photos/banner.png');
+    background-size: cover;
+    background-position: center;
+
+    animation: Slide_Up 0.5s ease;
+
+}
+
+.profile {
+    background-color: var(--block);
+    width: 600px;
+    margin: auto;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    animation: Slide_Up 0.5s ease;
+}
+
+.profile name,
+.profile proffession,
+.profile country,
+.profile about {
+    display: block;
+}
+
+
+.profile-container {
+
+    display: flex;
+
+}
+
 .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8 {
     background-color: var(--block);
     width: 600px;
@@ -136,6 +224,7 @@ p
 }
 
 .block-1 {
+
     animation: Slide_Up 0.5s ease;
 }
 
@@ -181,39 +270,19 @@ p
 
 .avatar
 {
-
-    display: block;
-    width: 200px;
-    border-radius: 50%;
-    margin: auto;
-    border: 5px solid;
+    height: 100px;
+    width: 100px;
+    border-radius: 20px;
+    border: 3px solid;
     border-color: var(--main);
+    transform: translateY(-80px);
+    margin-bottom: -70px;
 
-}
-
-.ukraine-panel
-{
-    margin: auto;
-    width: fit-content;
-
-}
-
-.ukraine
-{
-
-    transition: background-color 0.5s;
-
-    border-radius: 10px;
-
-}
-
-
-.ukraine:hover
-{
-
-    background-color: var(--main-hover);
-    border-radius: 10px;
+    background-image: url('/photos/avatar.gif');
+    background-size: cover;
+    background-position: center;
     
+
 }
 
 .location
@@ -541,7 +610,7 @@ p
 
     }
     
-    .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7 {
+    .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .banner, .profile {
         width: 80%;
     }
     
@@ -574,7 +643,8 @@ p
     .avatar
     {
 
-        width: 60%;
+        width: 100px;
+        height: 100px;
 
     }
 
