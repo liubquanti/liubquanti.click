@@ -588,22 +588,83 @@ fol-number {
 
 }
 
-.base {
+.education-document1, .education-document2, .education-document3 {
 
-    transition: transform 0.5s;
+    transition: height 0.5s;
 
-    display: block;
-    padding: 10px;
-    width: 300px;
-    border-radius: 20px;
-    transform: rotate(0deg);
+    background-color: var(--block);
+    width: 600px;
     margin: auto;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+    height: 100px;
+
+    background-size: cover;
+    background-position: center;
 
 }
 
-.base:hover {
+.education-document1 {
 
-    transform: rotate(5deg)
+    background-image: url(/photos/base.jpg);
+    animation: Slide_Up 0.5s ease;
+
+}
+
+.education-document2 {
+
+    background-image: url(/photos/full.jpg);
+    animation: Slide_Up 1s ease;
+
+}
+
+.education-document3 {
+
+    
+    background-image: url(/photos/spec.png);
+    animation: Slide_Up 1.5s ease;
+
+}
+
+.education-document1:hover, .education-document2:hover, .education-document3:hover {
+
+    height: 420px;
+
+}
+
+.education-label1, .education-label2, .education-label3 {
+
+    background-color: var(--block);
+    width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 20px;
+    padding-top: 5px;
+    border: 2px solid;
+    border-top: 0;
+    border-color: var(--main);
+
+}
+
+.education-label1 {
+
+    animation: Slide_Up 0.5s ease;
+}
+
+.education-label2 {
+
+    animation: Slide_Up 1s ease;
+}
+
+.education-label3 {
+
+    animation: Slide_Up 1.5s ease;
+
 }
 
 .item {
@@ -875,27 +936,16 @@ fol-number {
 
     }
 
-    .button {
+    .education-document1, .education-document2, .education-document3, .education-label1, .education-label2, .education-label3 {
 
-        margin: 11px;
-
-    }
-
-    .button-plus {
-
-        margin-top: 0px;
+        width: 90%;
 
     }
 
-    .base {
+    .education-document1:hover, .education-document2:hover, .education-document3:hover {
 
-        width: 200px;
+        height: 240px;
 
-    }
-
-    .base:hover {
-
-        transform: rotate(0deg)
     }
 
     .background-image {
