@@ -276,6 +276,7 @@ country {
     width: 600px;
     margin: auto;
     display: flex;
+    flex-wrap: wrap;
 
 }
 
@@ -289,6 +290,8 @@ country {
     margin-bottom: 20px;
     border: 2px solid;
     border-color: var(--main);
+    flex-basis: 200px;
+    flex-grow: 1;
 
     animation: Slide_Up 1s ease;
 
@@ -404,6 +407,8 @@ fol-number {
     margin-bottom: 20px;
     border: 2px solid;
     border-color: var(--main);
+    flex-basis: 200px;
+    flex-grow: 1;
 
     animation: Slide_Up 1.5s ease;
 
@@ -920,4 +925,15 @@ fol-number {
         justify-content: center;
 
     }
+}
+
+@media only screen and (max-width: 485px) {
+
+    .instagram-block {
+
+        width: 100%;
+        margin-right: 0px;
+
+    }
+
 }
