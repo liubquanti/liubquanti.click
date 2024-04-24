@@ -39,19 +39,11 @@ window.addEventListener('load', function () {
     document.getElementById("age").textContent = age;
 });
 
-function changeTitle(newTitle) {
-    document.getElementById('socialTitle').innerHTML = '<h3>' + newTitle + '</h3>';
-}
 
 function restoreTitle() {
     var titleElement = document.getElementById('socialTitle');
     titleElement.innerHTML = '<h3> Соцмережі </h3>';
 }
-
-var nameIndex = 0;
-var proffessionIndex = 0;
-var countryIndex = 0;
-var aboutIndex = 0;
 
 var currentDate = new Date();
 var birthDate = new Date("2005-10-27");
@@ -62,52 +54,34 @@ if (currentDate < birthDateThisYear) {
     age--;
 }
 
-var name = 'Олег Любченко';
-var proffession = 'UI/UX-Дизайнер';
-var country = age + ' років • Україна';
-var about = 'Мої вітання! Я роблю дизайн інтерфейсу для мобільних, десктопних та WEB засунків. Окрім цього я також полюбляю монтувати відео, обробляти фото та малювати векторну графіку.';
+function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+}
+
 var speed = 20;
 
-function typeName() {
-    if (nameIndex < name.length) {
-        document.getElementById("name").innerHTML += name.charAt(nameIndex);
-        nameIndex++;
-        setTimeout(typeName, speed);
-    } else {
-        setTimeout(typeProffession, speed); // якщо рядок name вже написаний, починаємо писати proffession
+let textToType = [{text: 'Олег Любченко', elementId: 'name'},
+{text: 'UI/UX-Дизайнер', elementId: 'proffession'},
+{text: age + ' років • Україна', elementId: 'country'},
+{text: 'Мої вітання! Я роблю дизайн інтерфейсу для мобільних, десктопних та WEB засунків. Окрім цього я також полюбляю монтувати відео, обробляти фото та малювати векторну графіку.', elementId: 'about'},];
+
+async function type(data){
+    for (element of data)
+    {
+        let index = 0;
+        let domElement = document.getElementById(element.elementId);
+        let len = element.text.length;
+        while (index < len) {
+            domElement.textContent += element.text.charAt(index);
+            await sleep(speed);
+            index++;
+        }
     }
 }
 
-function typeProffession() {
-    if (proffessionIndex < proffession.length) {
-        document.getElementById("proffession").innerHTML += proffession.charAt(proffessionIndex);
-        proffessionIndex++;
-        setTimeout(typeProffession, speed);
-    } else {
-        setTimeout(typeCountry, speed); // якщо рядок proffession вже написаний, починаємо писати country
-    }
-}
 
-function typeCountry() {
-    if (countryIndex < country.length) {
-        document.getElementById("country").innerHTML += country.charAt(countryIndex);
-        countryIndex++;
-        setTimeout(typeCountry, speed);
-    } else {
-        setTimeout(typeAbout, speed); // якщо рядок country вже написаний, починаємо писати about
-    }
-}
-
-function typeAbout() {
-    if (aboutIndex < about.length) {
-        document.getElementById("about").innerHTML += about.charAt(aboutIndex);
-        aboutIndex++;
-        setTimeout(typeAbout, speed);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', function () {
-    setTimeout(typeName, speed);
+window.addEventListener('load', function () {
+    type(textToType);
 });
 
 document.addEventListener('DOMContentLoaded', function() {

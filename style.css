@@ -27,6 +27,10 @@
     src: url('/fonts/SamsungSans-Thin.ttf');
 }
 
+*{
+    box-sizing: border-box;
+}
+
 :root {
     --background: #010102;
     --background-pulse: #363636;
@@ -269,7 +273,7 @@ country {
 
 .social-block-container {
 
-    width: 640px;
+    width: 600px;
     margin: auto;
     display: flex;
 
@@ -281,6 +285,7 @@ country {
     width: fit-content;
     border-radius: 20px;
     padding: 20px;
+    margin-right: 20px;
     margin-bottom: 20px;
     border: 2px solid;
     border-color: var(--main);
@@ -301,11 +306,11 @@ country {
 }
 
 .instagram-photos-container {
-    position: relative;
     display: flex;
-    width: fit-content;
+    justify-content: center;
     align-items: center;
     text-align: center;
+    margin: auto;
 }
 
 .photo-change-button {
@@ -395,7 +400,7 @@ fol-number {
     width: 340px;
     border-radius: 20px;
     padding: 20px;
-    margin-left: 20px;
+    width: 100%;
     margin-bottom: 20px;
     border: 2px solid;
     border-color: var(--main);
@@ -552,15 +557,6 @@ fol-number {
 
 }
 
-.socialpanel {
-
-    display: flex;
-    justify-content: center;
-    width: fit-content;
-    margin: auto;
-
-}
-
 .button {
 
     transition: background-color 0.5s;
@@ -582,13 +578,6 @@ fol-number {
 
 }
 
-.socialicon {
-
-    width: 20px;
-    margin-bottom: -3px;
-    margin-right: 5px;
-
-}
 
 .embed-v {
 
@@ -784,7 +773,7 @@ fol-number {
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 700px) {
 
     hr {
 
@@ -834,15 +823,6 @@ fol-number {
 
     }
 
-    .socialpanel {
-
-        display: flex;
-        width: fit-content;
-        margin: auto;
-        flex-wrap: wrap;
-
-    }
-
     .instagram-block {
 
         width: 50%;
@@ -878,15 +858,13 @@ fol-number {
 
     .social-block-container {
 
-        width: 90%;
-        margin: auto;
-        display: flex;
+        width: 80% !important;
     
     }
 
     .map-block {
 
-        width: 90%;
+        width: 80%;
 
     }
 
