@@ -53,11 +53,20 @@ var proffessionIndex = 0;
 var countryIndex = 0;
 var aboutIndex = 0;
 
+var currentDate = new Date();
+var birthDate = new Date("2005-10-27");
+var age = currentDate.getFullYear() - birthDate.getFullYear();
+var birthDateThisYear = new Date(currentDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
+
+if (currentDate < birthDateThisYear) {
+    age--;
+}
+
 var name = 'Олег Любченко';
 var proffession = 'UI/UX-Дизайнер';
-var country = 'Україна';
-var about = 'Мої вітання! Я - починаючий UI/UX-дизайнер.';
-var speed = 50; // затримка у 1 секунду
+var country = age + ' років • Україна';
+var about = 'Мої вітання! Я роблю дизайн інтерфейсу для мобільних, десктопних та WEB засунків. Окрім цього я також полюбляю монтувати відео, обробляти фото та малювати векторну графіку.';
+var speed = 20;
 
 function typeName() {
     if (nameIndex < name.length) {
@@ -99,4 +108,49 @@ function typeAbout() {
 
 document.addEventListener('DOMContentLoaded', function () {
     setTimeout(typeName, speed);
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    var currentPhotoIndex = 1; // починаємо з першої фотографії
+    var totalPhotos = 3; // загальна кількість фотографій
+    var container = document.querySelector('.instagram-photos-container');
+    var prevButton = document.getElementById('prevButton');
+    var nextButton = document.getElementById('nextButton');
+
+    // Функція для зміни класу фотографії та застосування анімації "fade"
+    function changePhoto(index) {
+        var photos = container.querySelectorAll('.instagram-photos');
+        photos.forEach(function(photo) {
+            photo.style.opacity = '0'; // змінюємо прозорість на 0
+        });
+        setTimeout(function() {
+            photos.forEach(function(photo) {
+                photo.style.display = 'none'; // ховаємо фотографії
+            });
+            var currentPhoto = container.querySelector('.photo' + index);
+            currentPhoto.style.display = 'block'; // показуємо поточну фотографію
+            setTimeout(function() {
+                currentPhoto.style.opacity = '1'; // змінюємо прозорість на 1 з анімацією "fade"
+            }, 50);
+        }, 100);
+    }
+
+    // Функція для переходу до попередньої фотографії
+    function prevPhoto() {
+        currentPhotoIndex = (currentPhotoIndex - 1 + totalPhotos) % totalPhotos || totalPhotos;
+        changePhoto(currentPhotoIndex);
+    }
+
+    // Функція для переходу до наступної фотографії
+    function nextPhoto() {
+        currentPhotoIndex = (currentPhotoIndex % totalPhotos) + 1;
+        changePhoto(currentPhotoIndex);
+    }
+
+    // Додавання обробників подій для кнопок "назад" та "вперед"
+    prevButton.addEventListener('click', prevPhoto);
+    nextButton.addEventListener('click', nextPhoto);
+
+    // Відображення першої фотографії при завантаженні сторінки
+    changePhoto(currentPhotoIndex);
 });

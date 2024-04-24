@@ -27,7 +27,7 @@
     src: url('/fonts/SamsungSans-Thin.ttf');
 }
 
-:root{
+:root {
     --background: #010102;
     --background-pulse: #363636;
     --text: #fafaff;
@@ -37,10 +37,10 @@
     --main-hover: #575759;
     --navigation: #a6caef;
     --navigation-hover: #ffffff;
+    --follow-nuber: #acacac;
 }
 
-body
-{
+body {
 
     background-color: var(--background);
     font-family: Samsung-Regular;
@@ -50,8 +50,7 @@ body
 
 }
 
-body::-webkit-scrollbar
-{
+body::-webkit-scrollbar {
 
     display: none;
 
@@ -65,16 +64,20 @@ body.pulse {
     0% {
         background-color: var(--background);
     }
+
     50% {
         background-color: var(--background-pulse);
     }
+
     100% {
         background-color: var(--background);
     }
 }
 
-h1, h2, h3, h4
-{
+h1,
+h2,
+h3,
+h4 {
 
     text-align: center;
     margin: auto;
@@ -83,8 +86,7 @@ h1, h2, h3, h4
 
 }
 
-hr
-{
+hr {
 
     height: 5px;
     width: 300px;
@@ -94,16 +96,14 @@ hr
 
 }
 
-a
-{
+a {
 
     color: var(--text);
     text-decoration: none;
 
 }
 
-p
-{
+p {
 
     text-indent: 20px;
 
@@ -132,17 +132,16 @@ country {
 
 }
 
-.navigation
-{
+.navigation {
 
     text-align: center;
     margin-top: 50px;
     margin-bottom: 50px;
+    user-select: none;
 
 }
 
-.navigation-link
-{
+.navigation-link {
 
     transition: color 0.5s;
 
@@ -152,15 +151,13 @@ country {
 
 }
 
-.navigation-link:hover
-{
+.navigation-link:hover {
 
     color: var(--navigation-hover);
 
 }
 
-.navigation-link-on
-{
+.navigation-link-on {
 
     margin-inline: 10px;
     color: var(--text);
@@ -214,7 +211,14 @@ country {
 
 }
 
-.block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .block-8 {
+.block-1,
+.block-2,
+.block-3,
+.block-4,
+.block-5,
+.block-6,
+.block-7,
+.block-8 {
     background-color: var(--block);
     width: 600px;
     margin: auto;
@@ -256,20 +260,212 @@ country {
     animation: Slide_Up 4s ease;
 }
 
+.social-block-container {
+
+    width: 640px;
+    margin: auto;
+    display: flex;
+
+}
+
+.instagram-block {
+
+    background-color: var(--block);
+    width: fit-content;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.instagram-block-icon {
+
+    height: 25px;
+    width: 25px;
+
+    background-image: url('/icons/instagram.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.instagram-photos-container {
+    position: relative;
+    display: flex;
+    width: fit-content;
+    align-items: center;
+    text-align: center;
+}
+
+.photo-change-button {
+
+    width: 20px;
+    height: 20px;
+    background-color: var(--main);
+    border-radius: 50px;
+    color: var(--text);
+    text-align: center;
+    font-family: Samsung-Bold;
+    cursor: pointer;
+    user-select: none;
+
+}
+
+.instagram-photos {
+    height: 150px;
+    width: 150px;
+    border-radius: 15px;
+    background-size: cover;
+    background-position: center;
+    opacity: 1;
+    transition: opacity 0.1s ease;
+    margin: 10px;
+}
+
+.instagram-block-label {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.instagram-block-username {
+
+    margin-left: 10px;
+
+}
+
+.photo1 {
+    background-image: url('/photos/instagram/moulins.webp');
+}
+
+.photo2 {
+    background-image: url('/photos/instagram/lyon.webp');
+}
+
+.photo3 {
+    background-image: url('/photos/instagram/course-work.webp');
+}
+
+.instagram-follow-button {
+
+    transition: background-color 0.5s;
+
+    background-color: var(--main);
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    user-select: none;
+
+}
+
+.instagram-follow-button:hover {
+
+    background-color: var(--main-hover);
+
+}
+
+fol-number {
+
+    color: var(--follow-nuber);
+
+}
+
+.youtube-block {
+
+    background-color: var(--block);
+    width: 340px;
+    border-radius: 20px;
+    padding: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+
+}
+
+.youtube-block-icon {
+
+    height: 25px;
+    width: 25px;
+
+    background-image: url('/icons/youtube.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.youtube-block-label {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.youtube-block-username {
+
+    margin-left: 10px;
+
+}
+
+.map-block {
+
+    background-color: var(--block);
+    width: 600px;
+    margin: auto;
+    border-radius: 20px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+
+.map-block-icon {
+
+    height: 25px;
+    width: 25px;
+
+    background-image: url('/icons/location.png');
+    background-size: cover;
+    background-position: center;
+
+}
+
+.map-block-label {
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+
+
+}
+
+.map-block-username {
+
+    margin-left: 10px;
+
+}
 
 @keyframes Slide_Up {
     0% {
         transform: translateX(100px);
         opacity: 0%;
     }
+
     100% {
         transform: translateX(0px);
         opacity: 100%;
     }
 }
 
-.avatar
-{
+.avatar {
     height: 100px;
     width: 100px;
     border-radius: 20px;
@@ -281,12 +477,11 @@ country {
     background-image: url('/photos/avatar.png');
     background-size: cover;
     background-position: center;
-    
+
 
 }
 
-.location
-{
+.location {
 
     width: 20px;
     margin-bottom: -3px;
@@ -294,15 +489,13 @@ country {
 
 }
 
-.text-extra
-{
+.text-extra {
 
     width: 80%;
     margin: auto;
 }
 
-.text
-{
+.text {
 
     width: 80%;
     margin: auto;
@@ -310,8 +503,7 @@ country {
 
 }
 
-.text-h
-{
+.text-h {
 
     text-align: center;
     width: 80%;
@@ -319,8 +511,7 @@ country {
 
 }
 
-.text-a
-{
+.text-a {
 
     transition: color 0.5s;
 
@@ -329,24 +520,21 @@ country {
 
 }
 
-.text-a:hover
-{
+.text-a:hover {
 
     color: var(--navigation-hover);
     border-radius: 50px;
 
 }
 
-.text-p
-{
+.text-p {
 
     color: var(--main-hover);
 
 }
 
-.socialpanel
-{
-    
+.socialpanel {
+
     display: flex;
     justify-content: center;
     width: fit-content;
@@ -354,8 +542,7 @@ country {
 
 }
 
-.button
-{
+.button {
 
     transition: background-color 0.5s;
 
@@ -369,15 +556,14 @@ country {
 
 }
 
-.button:hover, .button-center:hover
-{
+.button:hover,
+.button-center:hover {
 
     background-color: var(--main-hover);
 
 }
 
-.socialicon
-{
+.socialicon {
 
     width: 20px;
     margin-bottom: -3px;
@@ -385,8 +571,7 @@ country {
 
 }
 
-.embed-v
-{
+.embed-v {
 
     display: block;
     border-radius: 30px;
@@ -395,8 +580,7 @@ country {
 
 }
 
-.base
-{
+.base {
 
     transition: transform 0.5s;
 
@@ -409,17 +593,12 @@ country {
 
 }
 
-.base:hover
-{
+.base:hover {
 
     transform: rotate(5deg)
-
-
-
 }
 
-.item
-{
+.item {
 
     display: block;
     width: 100px;
@@ -429,8 +608,7 @@ country {
 
 }
 
-.item-meme
-{
+.item-meme {
 
     display: block;
     width: 100px;
@@ -455,35 +633,31 @@ country {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(360deg);
     }
 }
 
-.item-table
-{
+.item-table {
 
     width: 100%
-
 }
 
-.item-text
-{
+.item-text {
 
     text-align: center;
     margin: 10px;
 
 }
 
-.item-sq
-{
+.item-sq {
 
     width: 50%;
 
 }
 
-.background-image
-{
+.background-image {
 
     position: fixed;
     top: 400px;
@@ -496,8 +670,7 @@ country {
 
 }
 
-.other-panel
-{
+.other-panel {
 
     margin: auto;
     display: flex;
@@ -522,28 +695,25 @@ country {
     border-radius: 30px;
     margin: 10px;
     padding: 10px;
-    
+
 }
 
-.other-block-label
-{
+.other-block-label {
 
     transition: color 0.5s;
 
     font-weight: bold;
     color: var(--navigation);
-    
+
 
 }
 
-.other-block:hover
-{
+.other-block:hover {
 
     background-color: var(--main-hover);
     color: var(--navigation-hover);
 
-    .other-block-label
-    {
+    .other-block-label {
 
         color: var(--navigation-hover);
 
@@ -551,16 +721,14 @@ country {
 
 }
 
-.other-block-icon
-{
+.other-block-icon {
 
     width: 40%;
 
 }
 
 
-.game-ico
-{
+.game-ico {
 
     display: block;
     height: 300px;
@@ -569,24 +737,21 @@ country {
 
 }
 
-.gamepanel
-{
+.gamepanel {
 
     width: fit-content;
     margin: auto;
 
 }
 
-.gamegroup
-{
+.gamegroup {
 
     display: inline-block;
     margin: 20px;
 
 }
 
-.spotify
-{
+.spotify {
 
     border-radius: 12px;
     border: none;
@@ -600,56 +765,57 @@ country {
 
 
 
-@media only screen and (max-width: 600px)
-{
-    
-    hr
-    {
+@media only screen and (max-width: 600px) {
+
+    hr {
 
         width: 200px;
 
     }
-    
-    .block-1, .block-2, .block-3, .block-4, .block-5, .block-6, .block-7, .banner, .profile {
+
+    .block-1,
+    .block-2,
+    .block-3,
+    .block-4,
+    .block-5,
+    .block-6,
+    .block-7,
+    .banner,
+    .profile {
         width: 80%;
     }
-    
 
-    .navigation
-    {
 
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    .navigation {
+
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
 
     }
 
-    .navigation-link
-    {
+    .navigation-link {
 
         margin-inline: 0px;
         padding: 10px;
 
     }
 
-    .navigation-link-on
-    {
+    .navigation-link-on {
 
         margin-inline: 0px;
         padding: 10px;
 
     }
 
-    .avatar
-    {
+    .avatar {
 
         width: 100px;
         height: 100px;
 
     }
 
-    .socialpanel
-    {
+    .socialpanel {
 
         display: flex;
         width: fit-content;
@@ -658,57 +824,75 @@ country {
 
     }
 
-    .button
-    {
+    .instagram-photos {
+
+        width: 90px;
+        height: 90px;
+
+    }
+
+    .social-block-container {
+
+        width: 90%;
+        margin: auto;
+        display: flex;
+    
+    }
+
+    .map-block {
+
+        width: 90%;
+
+    }
+
+    .map {
+
+        width: 100%;
+
+    }
+
+    .button {
 
         margin: 11px;
 
     }
 
-    .button-plus
-    {
+    .button-plus {
 
         margin-top: 0px;
 
     }
 
-    .base
-    {
+    .base {
 
         width: 200px;
 
     }
-    
-    .base:hover
-    {
+
+    .base:hover {
 
         transform: rotate(0deg)
-
     }
 
-    .background-image
-    {
+    .background-image {
 
         display: none;
 
     }
 
-    .gamepanel
-    {
+    .gamepanel {
 
         margin: auto;
 
     }
 
-    .gamegroup
-    {
+    .gamegroup {
 
         display: inline;
 
     }
 
-    .other-panel
-    {
+    .other-panel {
 
         justify-content: center;
 
