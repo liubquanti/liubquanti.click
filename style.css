@@ -180,6 +180,8 @@ country {
     background-image: url('/photos/banner.png');
     background-size: cover;
     background-position: center;
+    border: 2px solid;
+    border-color: var(--main);
 
     animation: Slide_Up 0.5s ease;
 
@@ -193,6 +195,9 @@ country {
     border-bottom-right-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+    border-top: none;
 
     animation: Slide_Up 0.5s ease;
 }
@@ -225,6 +230,8 @@ country {
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
+    border-color: var(--main);
 }
 
 .block-1 {
@@ -275,6 +282,10 @@ country {
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+
+    animation: Slide_Up 1s ease;
 
 }
 
@@ -386,6 +397,10 @@ fol-number {
     padding: 20px;
     margin-left: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+
+    animation: Slide_Up 1.5s ease;
 
 }
 
@@ -423,6 +438,10 @@ fol-number {
     border-radius: 20px;
     padding: 20px;
     margin-bottom: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+
+    animation: Slide_Up 2s ease;
 
 }
 
@@ -824,10 +843,36 @@ fol-number {
 
     }
 
+    .instagram-block {
+
+        width: 50%;
+
+    }
+
     .instagram-photos {
 
-        width: 90px;
-        height: 90px;
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .photo1, .photo2, .photo3{
+
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .instagram-photos-container{
+
+        width: 100%;
+        height: fit-content;
+
+    }
+
+    .youtube-block {
+
+        width: 50%;
 
     }
 
