@@ -588,6 +588,125 @@ fol-number {
 
 }
 
+.services-container {
+
+    width: 600px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    user-select: none;
+    text-align: center;
+
+}
+
+.services-block1, .services-block2, .services-block3, .services-block4, .services-block5 {
+
+    width: 40%;
+    flex-grow: 1;
+    flex-basis: 200;
+
+}
+
+.services-block1 {
+
+    animation: Slide_Up 1s ease;
+
+}
+
+.services-block2 {
+
+    animation: Slide_Up 1.5s ease;
+
+}
+
+.services-block3 {
+
+    animation: Slide_Up 2s ease;
+
+}
+
+.services-block4 {
+
+    animation: Slide_Up 2.5s ease;
+
+}
+
+.services-block5 {
+
+    animation: Slide_Up 3s ease;
+
+}
+
+.services-block1:hover > .services-block-label, .services-block2:hover > .services-block-label, .services-block3:hover > .services-block-label, .services-block4:hover > .services-block-label, .services-block5:hover > .services-block-label {
+
+    background-color: var(--main-hover);
+
+}
+
+.services-block-banner1, .services-block-banner2, .services-block-banner3, .services-block-banner4, .services-block-banner5 {
+
+    background-color: var(--block);
+    height: 100px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.services-block-banner1 {
+
+    background-image: url(https://i.postimg.cc/mZv3XXF7/Blue-Girl.jpg);
+
+}
+
+.services-block-banner2 {
+
+    background-image: url(https://i.postimg.cc/VNL2ZCYM/The-Inner-Light.jpg);
+
+}
+
+.services-block-banner3 {
+
+    background-image: url(https://i.postimg.cc/CxYbfjr4/Thin-Lines.jpg);
+
+}
+
+.services-block-banner4 {
+
+    background-image: url(https://i.postimg.cc/hjvcXfHW/Minimalist-Lofi-Desk.jpg);
+
+}
+
+.services-block-banner5 {
+
+    background-image: url(https://i.postimg.cc/K89ccL8c/Abstract-Dark.jpg);
+
+}
+
+
+
+.services-block-label {
+
+    background-color: var(--block);
+    height: 140px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 20px;
+    border: 2px solid;
+    border-top: 0;
+    border-color: var(--main);
+
+    transition: background-color 0.5s;
+
+}
+
 .education-document1, .education-document2, .education-document3 {
 
     transition: height 0.5s;
@@ -601,7 +720,6 @@ fol-number {
     border: 2px solid;
     border-color: var(--main);
     height: 100px;
-
     background-size: cover;
     background-position: center;
 
@@ -946,6 +1064,12 @@ fol-number {
 
         height: 240px;
 
+    }
+
+    .services-container {
+
+        width: 90%;
+    
     }
 
     .background-image {
