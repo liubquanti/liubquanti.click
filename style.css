@@ -124,7 +124,8 @@ proffession {
 
     font-size: 20px;
     font-family: Samsung-Medium;
-    padding: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 
 }
 
@@ -132,7 +133,8 @@ country {
 
     font-size: 20px;
     font-family: Samsung-Medium;
-    padding: 2px;
+    padding-top: 2px;
+    padding-bottom: 2px;
 
 }
 
@@ -175,7 +177,7 @@ country {
 .banner {
 
     background-color: var(--block);
-    height: 100px;
+    height: 150px;
     width: 600px;
     margin: auto;
     border-top-left-radius: 20px;
@@ -493,7 +495,7 @@ fol-number {
     height: 100px;
     width: 100px;
     border-radius: 20px;
-    border: 3px solid;
+    border: 2px solid;
     border-color: var(--main);
     transform: translateY(-80px);
     margin-bottom: -70px;
@@ -886,8 +888,6 @@ fol-number {
 
 }
 
-
-
 .other-block-label {
 
     background-color: var(--block);
@@ -904,35 +904,121 @@ fol-number {
 
 }
 
-.item {
+.gear-container {
 
-    display: block;
-    width: 100px;
-    border-radius: 50%;
+    width: 600px;
     margin: auto;
-    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    user-select: none;
+    text-align: center;
 
 }
 
-.item-meme {
+.gear-block1, .gear-block2, .gear-block3, .gear-block4, .gear-block5 {
 
-    display: block;
-    width: 100px;
-    border-radius: 50%;
-    margin: auto;
-    padding: 5px;
-    cursor: pointer;
-
-    animation-name: rotation;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    animation-play-state: paused;
+    width: 40%;
+    flex-grow: 1;
+    flex-basis: 190px;
 
 }
 
-.playing {
-    animation-play-state: running;
+.gear-block1 {
+
+    animation: Slide_Up 1s ease;
+
+}
+
+.gear-block2 {
+
+    animation: Slide_Up 1.5s ease;
+
+}
+
+.gear-block3 {
+
+    animation: Slide_Up 2s ease;
+
+}
+
+.gear-block4 {
+
+    animation: Slide_Up 2.5s ease;
+
+}
+
+.gear-block5 {
+
+    animation: Slide_Up 3s ease;
+
+}
+
+.gear-block1:hover > .gear-block-label, .gear-block2:hover > .gear-block-label, .gear-block3:hover > .gear-block-label, .gear-block4:hover > .gear-block-label, .gear-block5:hover > .gear-block-label {
+
+    background-color: var(--main-hover);
+
+}
+
+.gear-block-banner1, .gear-block-banner2, .gear-block-banner3, .gear-block-banner4, .gear-block-banner5 {
+
+    background-color: var(--block);
+    height: 100px;
+    border-radius: 20px;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    padding: 20px;
+    border: 2px solid;
+    border-color: var(--main);
+    background-size: cover;
+    background-position: center;
+
+}
+
+.gear-block-banner1 {
+
+    background-image: url(/photos/gear/pc.png);
+
+}
+
+.gear-block-banner2 {
+
+    background-image: url(/photos/gear/phone.png);
+
+}
+
+.gear-block-banner3 {
+
+    background-image: url(/photos/gear/keyboard.png);
+
+}
+
+.gear-block-banner4 {
+
+    background-image: url(/photos/gear/gamepad.png);
+
+}
+
+.gear-block-banner5 {
+
+    background-image: url();
+
+}
+
+.gear-block-label {
+
+    background-color: var(--block);
+    height: 140px;
+    border-radius: 20px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    padding: 20px;
+    border: 2px solid;
+    border-top: 0;
+    border-color: var(--main);
+
+    transition: background-color 0.5s;
+
 }
 
 @keyframes rotation {
@@ -962,13 +1048,6 @@ fol-number {
     width: 50%;
 
 }
-
-.other-block-icon {
-
-    width: 40%;
-
-}
-
 
 .game-ico {
 
@@ -1133,10 +1212,10 @@ fol-number {
     
     }
 
-    .background-image {
+    .gear-container {
 
-        display: none;
-
+        width: 90%;
+    
     }
 
     .gamepanel {
@@ -1148,12 +1227,6 @@ fol-number {
     .gamegroup {
 
         display: inline;
-
-    }
-
-    .other-panel {
-
-        justify-content: center;
 
     }
 }
