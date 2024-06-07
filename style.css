@@ -86,6 +86,7 @@ h4 {
     text-align: center;
     margin: auto;
     padding: 5px;
+    padding-bottom: 15px;
     font-family: Samsung-Bold;
 
 }
@@ -195,6 +196,9 @@ country {
 
 .profile {
     background-color: var(--block);
+    background-image: url('/photos/block1bg.png');
+    background-size: cover;
+    background-position: right;
     width: 600px;
     margin: auto;
     border-bottom-left-radius: 20px;
@@ -706,6 +710,32 @@ fol-number {
     border-color: var(--main);
 
     transition: background-color 0.5s;
+
+}
+
+.service-logo {
+    
+    width: 100px;
+    height: 100px;
+    border-radius: 20px;
+    display: block;
+    margin: auto;
+}
+
+.service-button {
+
+    transition: background-color 0.5s;
+
+    background-color: var(--main);
+    width: 150px;
+    height: 30px;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: auto;
+    user-select: none;
 
 }
 
