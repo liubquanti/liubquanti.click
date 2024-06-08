@@ -1254,6 +1254,34 @@ fol-number {
     
     }
 
+    .social-button {
+
+        width: 45px;
+        height: 45px;
+
+    }
+
+    .social-icon {
+
+        width: 25px;
+
+    }
+
+
+    .social-button-container {
+
+        width: 100%;
+
+    }
+
+    .social-button-parent-container {
+
+        width: 100%;
+
+    }
+
+    
+
     .map-block {
 
         width: 90%;
