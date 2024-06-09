@@ -787,7 +787,7 @@ fol-number {
 
 }
 
-.education-document1, .education-document2, .education-document3 {
+.education-document1, .education-document2, .education-document3, .education-document4 {
 
     transition: height 0.5s;
 
@@ -807,14 +807,14 @@ fol-number {
 
 .education-document1 {
 
-    background-image: url(/photos/base.jpg);
+    background-image: url(/photos/education/base.jpg);
     animation: Slide_Up 0.5s ease;
 
 }
 
 .education-document2 {
 
-    background-image: url(/photos/full.jpg);
+    background-image: url(/photos/education/full.jpg);
     animation: Slide_Up 1s ease;
 
 }
@@ -822,8 +822,16 @@ fol-number {
 .education-document3 {
 
     
-    background-image: url(/photos/spec.png);
+    background-image: url(/photos/education/spec.png);
     animation: Slide_Up 1.5s ease;
+
+}
+
+.education-document4 {
+
+    
+    background-image: url(/photos/education/dia-ux.png);
+    animation: Slide_Up 2s ease;
 
 }
 
@@ -833,7 +841,14 @@ fol-number {
 
 }
 
-.education-label1, .education-label2, .education-label3 {
+.education-document4:hover {
+    
+
+    height: 850px;
+
+}
+
+.education-label1, .education-label2, .education-label3, .education-label4 {
 
     background-color: var(--block);
     width: 600px;
@@ -862,6 +877,12 @@ fol-number {
 .education-label3 {
 
     animation: Slide_Up 1.5s ease;
+
+}
+
+.education-label4 {
+
+    animation: Slide_Up 2s ease;
 
 }
 
