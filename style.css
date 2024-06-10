@@ -787,6 +787,12 @@ fol-number {
 
 }
 
+.service-button:hover {
+
+    background-color: var(--main-hover);
+
+}
+
 .education-document1, .education-document2, .education-document3, .education-document4 {
 
     transition: height 0.5s;
@@ -1315,7 +1321,7 @@ fol-number {
 
     }
 
-    .education-document1, .education-document2, .education-document3, .education-label1, .education-label2, .education-label3 {
+    .education-document1, .education-document2, .education-document3, .education-document4, .education-label1, .education-label2, .education-label3, .education-label4 {
 
         width: 90%;
 
@@ -1324,6 +1330,12 @@ fol-number {
     .education-document1:hover, .education-document2:hover, .education-document3:hover {
 
         height: 240px;
+
+    }
+
+    .education-document4:hover {
+
+        height: 500px;
 
     }
 
