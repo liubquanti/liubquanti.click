@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/wall/firestyle.css">
+    <link rel="icon" href="/icons/pageico.png" type="image/x-icon">
+    <title>liubquanti</title>
+</head>
+<body>
+    <div class="navigation">
+        <a href="/" class="navigation-link">Головна</a>
+        <a href="/activity/" class="navigation-link">Діяльність</a>
+        <a href="/education/" class="navigation-link">Освіта</a>
+        <a href="/other/" class="navigation-link">Інше</a>
+    </div>
+    <h1>Стіна</h1>
+    <div class="block-1">
+        <div id="inputSection">
+            <textarea id="comment" placeholder="Коментар"></textarea>
+            <br>
+            <input type="text" id="name" placeholder="Ім'я">
+            <button id="submit" onclick="submitComment()">Надіслати</button>
+        </div>
+        <div id="comments"></div>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/8.0.2/firebase-database.js"></script>
+        <script src="/wall/firescript.js"></script> 
+    </div>
+</body>
+</html>
