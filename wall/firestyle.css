@@ -57,3 +57,8 @@
 
 }
 
+#comments > div * {
+  display: block;
+  width: 100%;
+}
+
