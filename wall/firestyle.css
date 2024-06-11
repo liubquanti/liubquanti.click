@@ -53,7 +53,7 @@
     background-color: #3a3a3d;
     border-radius: 10px;
     width: 100%;
-    word-wrap: wrap;
+    word-break: break-word;
 
 }
 
