@@ -22,7 +22,8 @@ function submitComment() {
         var newCommentRef = database.push();
         newCommentRef.set({
             name: name,
-            comment: commentText
+            comment: commentText,
+            score: 0
         });
 
         document.getElementById("comment").value = "";
@@ -40,10 +41,82 @@ database.on("child_added", function(snapshot) {
     var commentElement = document.createElement("div");
     commentElement.id = snapshot.key;
     commentElement.innerHTML = "<strong>" + comment.name + "</strong> <br>" + comment.comment;
+
+    var likeDislikeContainer = document.createElement("div");
+    likeDislikeContainer.className = "like-dislike-container";
+
+    var likeButton = document.createElement("button");
+    likeButton.className = "like-button";
+    likeButton.innerHTML = "🔼";
+    likeButton.onclick = function() {
+        updateScore(snapshot.key, 1);
+    };
+
+    var scoreElement = document.createElement("span");
+    scoreElement.className = "score";
+    scoreElement.id = "score-" + snapshot.key;
+    scoreElement.innerHTML = comment.score !== undefined ? comment.score : "X";
+    updateScoreColor(scoreElement, comment.score);
+
+    var dislikeButton = document.createElement("button");
+    dislikeButton.className = "dislike-button";
+    dislikeButton.innerHTML = "🔽";
+    dislikeButton.onclick = function() {
+        updateScore(snapshot.key, -1);
+    };
+
+    likeDislikeContainer.appendChild(likeButton);
+    likeDislikeContainer.appendChild(scoreElement);
+    likeDislikeContainer.appendChild(dislikeButton);
+
+    commentElement.appendChild(likeDislikeContainer);
     commentsDiv.appendChild(commentElement);
 
     // Прокручуємо сторінку до низу при додаванні нового коментаря
     window.scrollTo(0, 0);
+});
+
+// Оновлення рахунку
+function updateScore(commentId, delta) {
+    var commentRef = database.child(commentId);
+
+    commentRef.transaction(function(comment) {
+        if (comment) {
+            comment.score += delta;
+        }
+        return comment;
+    }, function(error, committed, snapshot) {
+        if (error) {
+            console.log("Transaction failed: ", error);
+        } else if (committed) {
+            var scoreElement = document.getElementById("score-" + commentId);
+            var newScore = snapshot.val().score !== undefined ? snapshot.val().score : "X";
+            scoreElement.innerHTML = newScore;
+            updateScoreColor(scoreElement, newScore);
+        }
+    });
+}
+
+// Функція для оновлення кольору лічильника
+function updateScoreColor(element, score) {
+    if (score === "X") {
+        element.style.color = "white";
+    } else if (score < 0) {
+        element.style.color = "#ff8282";
+    } else if (score > 0) {
+        element.style.color = "#82ff9d";
+    } else {
+        element.style.color = "white";
+    }
+}
+
+// Оновлення рахунку в реальному часі
+database.on("child_changed", function(snapshot) {
+    var comment = snapshot.val();
+    var scoreElement = document.getElementById("score-" + snapshot.key);
+    var newScore = comment.score !== undefined ? comment.score : "X";
+    scoreElement.innerHTML = newScore;
+    updateScoreColor(scoreElement, newScore);
 });
 
 // Видалення коментаря
