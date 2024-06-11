@@ -55,7 +55,7 @@ database.on("child_added", function(snapshot) {
     var scoreElement = document.createElement("span");
     scoreElement.className = "score";
     scoreElement.id = "score-" + snapshot.key;
-    scoreElement.innerHTML = comment.score !== undefined ? comment.score : "X";
+    scoreElement.innerHTML = comment.score !== undefined ? comment.score : 0;
     updateScoreColor(scoreElement, comment.score);
 
     var dislikeButton = document.createElement("button");
@@ -82,6 +82,9 @@ function updateScore(commentId, delta) {
 
     commentRef.transaction(function(comment) {
         if (comment) {
+            if(!comment.score){
+                comment.score = 0;
+            }
             comment.score += delta;
         }
         return comment;
@@ -90,7 +93,7 @@ function updateScore(commentId, delta) {
             console.log("Transaction failed: ", error);
         } else if (committed) {
             var scoreElement = document.getElementById("score-" + commentId);
-            var newScore = snapshot.val().score !== undefined ? snapshot.val().score : "X";
+            var newScore = snapshot.val().score !== undefined ? snapshot.val().score : 0;
             scoreElement.innerHTML = newScore;
             updateScoreColor(scoreElement, newScore);
         }
@@ -99,9 +102,7 @@ function updateScore(commentId, delta) {
 
 // Функція для оновлення кольору лічильника
 function updateScoreColor(element, score) {
-    if (score === "X") {
-        element.style.color = "white";
-    } else if (score < 0) {
+    if (score < 0) {
         element.style.color = "#ff8282";
     } else if (score > 0) {
         element.style.color = "#82ff9d";
@@ -114,7 +115,6 @@ function updateScoreColor(element, score) {
 database.on("child_changed", function(snapshot) {
     var comment = snapshot.val();
     var scoreElement = document.getElementById("score-" + snapshot.key);
-    var newScore = comment.score !== undefined ? comment.score : "X";
     scoreElement.innerHTML = newScore;
     updateScoreColor(scoreElement, newScore);
 });
