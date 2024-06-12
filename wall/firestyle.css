@@ -45,7 +45,6 @@
     border-radius: 10px;
     width: 100%;
     word-break: break-word;
-    position: relative;
 }
 
 #comments > div * {
