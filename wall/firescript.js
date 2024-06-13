@@ -14,22 +14,27 @@ firebase.initializeApp(firebaseConfig);
 var database = firebase.database().ref("comments");
 
 // Функція для надсилання коментаря
-function submitComment() {
+function submitComment(parentId = null) {
     var name = document.getElementById("name").value;
-    var commentText = document.getElementById("comment").value;
+    var commentText = parentId ? document.getElementById("reply-comment-" + parentId).value : document.getElementById("comment").value;
 
     if (name && commentText) {
         var newCommentRef = database.push();
         newCommentRef.set({
             name: name,
             comment: commentText,
-            score: 0
+            score: 0,
+            parentId: parentId
         });
 
-        document.getElementById("comment").value = "";
+        if (parentId) {
+            document.getElementById("reply-comment-" + parentId).value = "";
+        } else {
+            document.getElementById("comment").value = "";
+        }
 
         // Прокручуємо сторінку до низу
-        window.scrollTo(0, 0);
+        
     }
 }
 
@@ -40,7 +45,14 @@ database.on("child_added", function(snapshot) {
 
     var commentElement = document.createElement("div");
     commentElement.id = snapshot.key;
-    commentElement.innerHTML = "<strong>" + comment.name + "</strong> <br>" + comment.comment;
+    commentElement.className = "comment";
+
+    var commentContent = document.createElement("div");
+    commentContent.className = "comment-content";
+    commentContent.innerHTML = "<strong>" + comment.name + "</strong> <hr>" + comment.comment;
+
+    var replyContainer = document.createElement("div");
+    replyContainer.className = "reply-container";
 
     var likeDislikeContainer = document.createElement("div");
     likeDislikeContainer.className = "like-dislike-container";
@@ -52,10 +64,12 @@ database.on("child_added", function(snapshot) {
         updateScore(snapshot.key, 1);
     };
 
+    var score = comment.score !== undefined ? comment.score : 0;
     var scoreElement = document.createElement("span");
     scoreElement.className = "score";
     scoreElement.id = "score-" + snapshot.key;
-    scoreElement.innerHTML = comment.score !== undefined ? comment.score : 0;
+    scoreElement.innerHTML = formatScore(score);
+    updateScoreColor(scoreElement, score);
     updateScoreColor(scoreElement, comment.score);
 
     var dislikeButton = document.createElement("button");
@@ -65,15 +79,54 @@ database.on("child_added", function(snapshot) {
         updateScore(snapshot.key, -1);
     };
 
+    function formatScore(score) {
+        if (score >= 1000000000) {
+            return (score / 1000000000).toFixed(1) + "B";
+        } else if (score >= 1000000) {
+            return (score / 1000000).toFixed(1) + "M";
+        } else if (score >= 1000) {
+            return (score / 1000).toFixed(1) + "K";
+        } else {
+            return score;
+        }
+    }
+
     likeDislikeContainer.appendChild(likeButton);
     likeDislikeContainer.appendChild(scoreElement);
     likeDislikeContainer.appendChild(dislikeButton);
 
-    commentElement.appendChild(likeDislikeContainer);
-    commentsDiv.appendChild(commentElement);
+    var replyTextarea = document.createElement("textarea");
+    replyTextarea.className = "reply-textarea";
+    replyTextarea.placeholder = "Відповісти";
+    replyTextarea.id = "reply-comment-" + snapshot.key;
 
-    // Прокручуємо сторінку до низу при додаванні нового коментаря
-    window.scrollTo(0, 0);
+    var replySubmitButton = document.createElement("button");
+    replySubmitButton.className = "reply-button";
+    replySubmitButton.innerHTML = ">";
+    replySubmitButton.onclick = function() {
+        submitComment(snapshot.key);
+    };
+
+    replyContainer.appendChild(likeDislikeContainer);
+    replyContainer.appendChild(replyTextarea);
+    replyContainer.appendChild(replySubmitButton);
+
+    commentContent.appendChild(replyContainer);
+
+    commentElement.appendChild(commentContent);
+
+    if (comment.parentId) {
+        var parentElement = document.getElementById(comment.parentId);
+        var parentReplySection = parentElement.querySelector(".reply-section");
+        if (!parentReplySection) {
+            parentReplySection = document.createElement("div");
+            parentReplySection.className = "reply-section";
+            parentElement.appendChild(parentReplySection);
+        }
+        parentReplySection.appendChild(commentElement);
+    } else {
+        commentsDiv.appendChild(commentElement);
+    }
 });
 
 // Оновлення рахунку
@@ -82,7 +135,7 @@ function updateScore(commentId, delta) {
 
     commentRef.transaction(function(comment) {
         if (comment) {
-            if(!comment.score){
+            if (!comment.score) {
                 comment.score = 0;
             }
             comment.score += delta;
@@ -115,16 +168,6 @@ function updateScoreColor(element, score) {
 database.on("child_changed", function(snapshot) {
     var comment = snapshot.val();
     var scoreElement = document.getElementById("score-" + snapshot.key);
-    scoreElement.innerHTML = newScore;
-    updateScoreColor(scoreElement, newScore);
+    scoreElement.innerHTML = snapshot.val().score !== undefined ? snapshot.val().score : 0;
+    updateScoreColor(scoreElement, snapshot.val().score);
 });
-
-// Видалення коментаря
-function deleteComment(commentId) {
-    var commentElement = document.getElementById(commentId);
-
-    if (commentElement) {
-        commentElement.remove();
-        database.child(commentId).remove();
-    }
-}

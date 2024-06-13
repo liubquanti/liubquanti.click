@@ -36,12 +36,14 @@
     border-radius: 10px;
     background-color: #3a3a3d;
     border: 3px solid #575759;
+    cursor: pointer;
 }
 
 #comments > div {
     height: fit-content;
     padding: 10px;
     background-color: #3a3a3d;
+    border: 3px solid #575759;
     border-radius: 10px;
     width: 100%;
     word-break: break-word;
@@ -50,22 +52,35 @@
 #comments > div * {
     display: block;
     width: 100%;
+    border-radius: 10px;
+}
+
+.comment-content > hr {
+    color: #575759 !important;
+    background-color: #575759 !important;
+    height: 3px !important;
 }
 
 .like-dislike-container {
     display: flex !important;
     width: fit-content !important;
+    height: 55px !important;
+    max-width: 50% !important;
     gap: 10px;
     margin-top: 10px;
+    border: 3px solid #575759;
+    border-radius: 10px;
+    padding: 10px;
+    word-break: normal;
 }
 
 .like-button, .dislike-button {
-    width: 40px !important;
+    width: 35px !important;
     background-color: #575759;
     border: none;
     color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
+    padding: 5px !important;
+    border-radius: 5px !important;
     cursor: pointer;
 }
 
@@ -77,4 +92,50 @@
     font-size: 1.2em;
     margin-top: 5px;
     width: fit-content !important;
+}
+
+.reply-section {
+    margin-top: 20px;
+    padding: 10px;
+    border: 3px solid #575759;
+}
+
+.reply-button {
+    height: 55px;
+    width: fit-content !important;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+    color: white;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 10px;
+    margin-bottom: 10px;
+
+    transition: background-color 0.5s;
+
+}
+
+.reply-button:hover {
+    background-color: #757579;
+}
+
+.reply-container {
+
+    display: flex !important;
+    gap: 10px;
+    width: f!important;
+    flex-grow: 1 !important;
+
+}
+
+.reply-textarea {
+    height: 55px;
+    margin-top: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #3d3a3a;
+    border: 3px solid #575759;
+    resize: none;
 }
