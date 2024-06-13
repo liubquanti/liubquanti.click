@@ -1,0 +1,102 @@
+#comments {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 20px;
+}
+
+#comment {
+    width: 100%;
+    height: 100px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+    resize: none;
+}
+
+#name {
+    margin-bottom: 10px;
+    width: 100%;
+    border-radius: 10px;
+    padding: 10px;
+    color: #ffffff;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+}
+
+#submit {
+    width: 150px;
+    height: 50px;
+    margin-bottom: 20px;
+    display: block;
+    margin-inline: auto;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+    cursor: pointer;
+}
+
+#adminSection {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#adminSection button {
+    width: 200px;
+    height: 50px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+    cursor: pointer;
+}
+
+#comments > div {
+    height: fit-content;
+    padding: 10px;
+    background-color: #3a3a3d;
+    border-radius: 10px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admincomcont {
+
+    display: flex;
+    gap: 10px;
+    padding: 10px;
+    border: 3px solid #575759;
+    border-radius: 10px;
+    margin: 10px 10px 0px 0;
+
+}
+
+.commentCheckbox {
+
+    width: 40px;
+    height: 35px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+    cursor: pointer;
+    vertical-align: bottom;
+
+}
+
+#delbutton {
+    width: 100px;
+    height: 40px;
+    color: #ffffff;
+    border-radius: 10px;
+    background-color: #3a3a3d;
+    border: 3px solid #575759;
+    cursor: pointer;
+
+}
