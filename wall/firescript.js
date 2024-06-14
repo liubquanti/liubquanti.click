@@ -17,7 +17,7 @@
     function submitComment(parentId = null) {
         var name = document.getElementById("name").value;
         var commentText = parentId ? document.getElementById("reply-comment-" + parentId).value : document.getElementById("comment").value;
-
+    
         if (name && commentText) {
             var newCommentRef = database.push();
             newCommentRef.set({
@@ -27,9 +27,12 @@
                 parentId: parentId,
                 timestamp: firebase.database.ServerValue.TIMESTAMP
             });
-
+    
             if (parentId) {
-                document.getElementById("reply-comment-" + parentId).value = "";
+                var replyTextarea = document.getElementById("reply-comment-" + parentId);
+                replyTextarea.value = "";
+                var container = replyTextarea.parentElement.querySelector(".like-dislike-container");
+                container.setAttribute("style", "display: flex !important");
             } else {
                 document.getElementById("comment").value = "";
             }
@@ -42,7 +45,6 @@
     // Виведення коментарів
 
     database.on("child_added", function (snapshot) {
-        console.log("child added");
         var comment = snapshot.val();
         var commentsDiv = document.getElementById("comments");
 
@@ -159,23 +161,25 @@
         replyTextarea.className = "reply-textarea";
         replyTextarea.placeholder = "Відповісти";
         replyTextarea.id = "reply-comment-" + snapshot.key;
-        replyTextarea.addEventListener('input', resizeTextArea)
-
+        replyTextarea.addEventListener('input', resizeTextArea);
+        replyTextarea.addEventListener('focus', hideContainerOnFocus);
+        replyTextarea.addEventListener('blur', showContainerOnBlur);
+    
         var replySubmitButton = document.createElement("button");
         replySubmitButton.className = "reply-button";
         replySubmitButton.innerHTML = ">";
         replySubmitButton.onclick = function () {
             submitComment(snapshot.key);
         };
-
+    
         replyContainer.appendChild(likeDislikeContainer);
         replyContainer.appendChild(replyTextarea);
         replyContainer.appendChild(replySubmitButton);
-
+    
         commentContent.appendChild(replyContainer);
-
+    
         commentElement.appendChild(commentContent);
-
+    
         if (comment.parentId) {
             var parentElement = document.getElementById(comment.parentId);
             var parentReplySection = parentElement.querySelector(".reply-section");
@@ -196,11 +200,27 @@
         if (target.value.length > 0) {
             container.setAttribute("style", "display: none !important;");
         }
-        else {
-            container.setAttribute("style", "flex !important");
+    }
+    
+    function hideContainerOnFocus(event) {
+        let container = event.target.parentElement.querySelector(".like-dislike-container");
+        container.setAttribute("style", "display: none !important;");
+    }
+    
+    function showContainerOnBlur(event) {
+        let target = event.target;
+        let container = event.target.parentElement.querySelector(".like-dislike-container");
+        if (target.value.length === 0) {
+            container.setAttribute("style", "display: flex !important");
         }
     }
-
+    
+    // Додаємо обробники подій до всіх textarea
+    document.querySelectorAll('textarea').forEach(textarea => {
+        textarea.addEventListener('input', resizeTextArea);
+        textarea.addEventListener('focus', hideContainerOnFocus);
+        textarea.addEventListener('blur', showContainerOnBlur);
+    });
     // Оновлення рахунку
     function updateScore(commentId, delta) {
         var commentRef = database.child(commentId);
