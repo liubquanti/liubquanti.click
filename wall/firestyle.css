@@ -139,3 +139,9 @@
     border: 3px solid #575759;
     resize: none;
 }
+
+.comment-timestamp {
+
+    opacity: 50%;
+
+}

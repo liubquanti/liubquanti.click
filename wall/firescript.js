@@ -24,7 +24,8 @@ function submitComment(parentId = null) {
             name: name,
             comment: commentText,
             score: 0,
-            parentId: parentId
+            parentId: parentId,
+            timestamp: firebase.database.ServerValue.TIMESTAMP
         });
 
         if (parentId) {
@@ -32,8 +33,6 @@ function submitComment(parentId = null) {
         } else {
             document.getElementById("comment").value = "";
         }
-
-        // Прокручуємо сторінку до низу
         
     }
 }
@@ -50,6 +49,58 @@ database.on("child_added", function(snapshot) {
     var commentContent = document.createElement("div");
     commentContent.className = "comment-content";
     commentContent.innerHTML = "<strong>" + comment.name + "</strong> <hr>" + comment.comment;
+
+    var date = new Date(comment.timestamp);
+    var dateString = timeAgo(date);
+    var timestampElement = document.createElement("small");
+    timestampElement.className = "comment-timestamp";
+    timestampElement.setAttribute('data-timestamp', comment.timestamp);
+    timestampElement.innerHTML = dateString;
+    commentContent.innerHTML = commentContent.innerHTML + "<hr>";
+
+    commentContent.appendChild(timestampElement);
+
+    // Функція для формування часу у відносному форматі
+    function timeAgo(time) {
+        const now = new Date();
+        const secondsPast = Math.floor((now - time) / 1000);
+
+        if (secondsPast < 60) {
+            return `${secondsPast} секунд тому`;
+        }
+        const minutesPast = Math.floor(secondsPast / 60);
+        if (minutesPast < 60) {
+            return `${minutesPast} хвилин тому`;
+        }
+        const hoursPast = Math.floor(minutesPast / 60);
+        if (hoursPast < 24) {
+            return `${hoursPast} годин тому`;
+        }
+        const daysPast = Math.floor(hoursPast / 24);
+        if (daysPast < 30) {
+            return `${daysPast} днів тому`;
+        }
+        const monthsPast = Math.floor(daysPast / 30);
+        if (monthsPast < 12) {
+            return `${monthsPast} місяців тому`;
+        }
+        const yearsPast = Math.floor(monthsPast / 12);
+        return `${yearsPast} років тому`;
+    }
+
+    // Функція для оновлення часу для всіх коментарів
+    function updateCommentTimes() {
+        const commentElements = document.querySelectorAll('.comment-timestamp');
+        commentElements.forEach(function(element) {
+            const timestamp = parseInt(element.getAttribute('data-timestamp'));
+            const date = new Date(timestamp);
+            element.innerHTML = timeAgo(date);
+        });
+    }
+
+    // Встановлюємо інтервал для оновлення часу кожні 60 секунд
+    setInterval(updateCommentTimes, 60000);
+    
 
     var replyContainer = document.createElement("div");
     replyContainer.className = "reply-container";
