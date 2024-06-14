@@ -39,7 +39,7 @@
     cursor: pointer;
 }
 
-#comments > div {
+#comments>div {
     height: fit-content;
     padding: 10px;
     background-color: #3a3a3d;
@@ -49,13 +49,13 @@
     word-break: break-word;
 }
 
-#comments > div * {
+#comments>div * {
     display: block;
     width: 100%;
     border-radius: 10px;
 }
 
-.comment-content > hr {
+.comment-content>hr {
     color: #575759 !important;
     background-color: #575759 !important;
     height: 3px !important;
@@ -74,7 +74,8 @@
     word-break: normal;
 }
 
-.like-button, .dislike-button {
+.like-button,
+.dislike-button {
     width: 35px !important;
     background-color: #575759;
     border: none;
@@ -84,7 +85,8 @@
     cursor: pointer;
 }
 
-.like-button:hover, .dislike-button:hover {
+.like-button:hover,
+.dislike-button:hover {
     background-color: #757579;
 }
 
@@ -124,7 +126,7 @@
 
     display: flex !important;
     gap: 10px;
-    width: f!important;
+    width: f !important;
     flex-grow: 1 !important;
 
 }
