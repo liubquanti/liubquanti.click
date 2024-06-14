@@ -80,15 +80,20 @@ database.on("child_added", function(snapshot) {
     };
 
     function formatScore(score) {
-        if (score >= 1000000000) {
-            return (score / 1000000000).toFixed(1) + "B";
-        } else if (score >= 1000000) {
-            return (score / 1000000).toFixed(1) + "M";
-        } else if (score >= 1000) {
-            return (score / 1000).toFixed(1) + "K";
+        var absScore = Math.abs(score);
+        var formattedScore;
+    
+        if (absScore >= 1000000000) {
+            formattedScore = (Math.floor(absScore / 100000000) / 10).toFixed(1) + "B";
+        } else if (absScore >= 1000000) {
+            formattedScore = (Math.floor(absScore / 100000) / 10).toFixed(1) + "M";
+        } else if (absScore >= 1000) {
+            formattedScore = (Math.floor(absScore / 100) / 10).toFixed(1) + "K";
         } else {
-            return score;
+            formattedScore = absScore.toString();
         }
+    
+        return score < 0 ? "-" + formattedScore : formattedScore;
     }
 
     likeDislikeContainer.appendChild(likeButton);
@@ -147,7 +152,7 @@ function updateScore(commentId, delta) {
         } else if (committed) {
             var scoreElement = document.getElementById("score-" + commentId);
             var newScore = snapshot.val().score !== undefined ? snapshot.val().score : 0;
-            scoreElement.innerHTML = newScore;
+            scoreElement.innerHTML = formatScore(newScore);
             updateScoreColor(scoreElement, newScore);
         }
     });
@@ -168,6 +173,24 @@ function updateScoreColor(element, score) {
 database.on("child_changed", function(snapshot) {
     var comment = snapshot.val();
     var scoreElement = document.getElementById("score-" + snapshot.key);
-    scoreElement.innerHTML = snapshot.val().score !== undefined ? snapshot.val().score : 0;
-    updateScoreColor(scoreElement, snapshot.val().score);
+    var newScore = snapshot.val().score !== undefined ? snapshot.val().score : 0;
+    scoreElement.innerHTML = formatScore(newScore);
+    updateScoreColor(scoreElement, newScore);
 });
+
+function formatScore(score) {
+    var absScore = Math.abs(score);
+    var formattedScore;
+
+    if (absScore >= 1000000000) {
+        formattedScore = (Math.floor(absScore / 100000000) / 10).toFixed(1) + "B";
+    } else if (absScore >= 1000000) {
+        formattedScore = (Math.floor(absScore / 100000) / 10).toFixed(1) + "M";
+    } else if (absScore >= 1000) {
+        formattedScore = (Math.floor(absScore / 100) / 10).toFixed(1) + "K";
+    } else {
+        formattedScore = absScore.toString();
+    }
+
+    return score < 0 ? "-" + formattedScore : formattedScore;
+}
