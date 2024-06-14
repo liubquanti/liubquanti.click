@@ -126,7 +126,7 @@
 
     display: flex !important;
     gap: 10px;
-    width: f !important;
+    width: 100% !important;
     flex-grow: 1 !important;
 
 }

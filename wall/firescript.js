@@ -1,4 +1,3 @@
-document.addEventListener("DOMContentLoaded", (event) => {
     // Ініціалізуємо Firebase
     var firebaseConfig = {
         apiKey: "AIzaSyBC6DE1C4XUXpU0JY0w1SVqweQTGtnFNx0",
@@ -262,4 +261,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
         return score < 0 ? "-" + formattedScore : formattedScore;
     }
-});
