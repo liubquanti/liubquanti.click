@@ -1126,6 +1126,60 @@ fol-number {
 
 }
 
+.gear-items-container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.gear-item {
+    display: flex;
+    gap: 20px;
+    
+}
+
+.gear-photo {
+    background-color: var(--block);
+    border-radius: 20px;
+    height: 150px;
+    border: 2px solid;
+    border-color: var(--main);
+}
+
+.gear-item-lable {
+    display: flex;
+    height: 150px;
+    background-color: var(--block);
+    border-radius: 20px;
+    width: 430px;
+    border: 2px solid;
+    border-color: var(--main);
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.gear-item-brand
+{
+    font-size: large;
+    text-align: center;
+}
+
+.gear-item-model
+{
+    text-align: center;
+}
+
+.gear-item-year
+{
+    text-align: center;
+    color: var(--main-hover);
+}
+
 @keyframes rotation {
     from {
         transform: rotate(0deg);
