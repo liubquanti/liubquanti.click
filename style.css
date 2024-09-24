@@ -1163,6 +1163,12 @@ fol-number {
     gap: 10px;
 }
 
+.gear-item-name
+{
+    font-size: large;
+    width: 600px;
+}
+
 .gear-item-brand
 {
     font-size: large;
