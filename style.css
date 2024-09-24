@@ -1358,6 +1358,10 @@ fol-number {
     .social-button-container {
 
         width: 100%;
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        flex-wrap: wrap;
 
     }
 
