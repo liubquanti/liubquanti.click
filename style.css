@@ -454,7 +454,7 @@ fol-number {
     width: 340px;
     border-radius: 20px;
     padding: 20px;
-    width: 100%;
+    width: 90%;
     margin-bottom: 20px;
     border: 2px solid;
     border-color: var(--main);
@@ -1431,5 +1431,28 @@ fol-number {
 
         display: inline;
 
+    }
+
+    .gear-item{
+        width: 90%;
+    }
+
+    .gear-item-lable {
+
+        width: 100%;
+        height: 100px;
+
+    }
+
+    .gear-photo {
+
+        height: 100px;
+
+    }
+    
+    .gear-item-name
+    {
+        font-size: medium;
+        width: 90%;
     }
 }
