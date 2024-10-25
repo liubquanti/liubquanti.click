@@ -33,7 +33,7 @@ function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-var speed = 20;
+var speed = 5;
 
 let textToType = [{text: 'Олег Любченко', elementId: 'name'},
 {text: 'UI/UX-Дизайнер', elementId: 'proffession'},
