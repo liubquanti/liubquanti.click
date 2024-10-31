@@ -103,4 +103,3 @@ document.addEventListener('DOMContentLoaded', function() {
     // Відображення першої фотографії при завантаженні сторінки
     changePhoto(currentPhotoIndex);
 });
-
