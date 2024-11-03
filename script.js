@@ -37,7 +37,7 @@ var speed = 5;
 
 let textToType = [{text: 'Олег Любченко', elementId: 'name'},
 {text: 'UI/UX-Дизайнер', elementId: 'proffession'},
-{text: age + ' років • Україна', elementId: 'country'},
+{text: age + ' років • Франція', elementId: 'country'},
 {text: 'Мої вітання! Я роблю дизайн інтерфейсу для мобільних, десктопних та WEB застосунків. Окрім цього я також полюбляю монтувати відео, обробляти фото та малювати векторну графіку.', elementId: 'about'},];
 
 async function type(data){
