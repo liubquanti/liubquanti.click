@@ -550,6 +550,14 @@ fol-number {
 
 }
 
+.map {
+
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+
+}
+
 @keyframes Slide_Up {
     0% {
         transform: translateX(100px);
