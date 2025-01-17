@@ -344,7 +344,7 @@ country {
     border: 2px solid;
     border-color: var(--main);
 
-    animation: Slide_Up 1.5s ease;
+    animation: Slide_Up 1s ease;
 
 }
 
@@ -459,7 +459,7 @@ fol-number {
     border: 2px solid;
     border-color: var(--main);
 
-    animation: Slide_Up 2s ease;
+    animation: Slide_Up 1.5s ease;
 
 }
 
