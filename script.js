@@ -54,9 +54,43 @@ async function type(data){
     }
 }
 
+// Function to fetch Instagram followers count from Firestore
+async function fetchInstagramFollowers() {
+    try {
+        const response = await fetch('https://firestore.googleapis.com/v1/projects/liubquanti/databases/(default)/documents/media/instagram');
+        
+        if (!response.ok) {
+            throw new Error('Network response was not ok: ' + response.status);
+        }
+        
+        const data = await response.json();
+        
+        // Check if the response contains followers count
+        if (data && data.fields && data.fields.followers && data.fields.followers.integerValue) {
+            const followersCount = parseInt(data.fields.followers.integerValue);
+            
+            // Update the HTML element with the followers count
+            const followersElement = document.getElementById('instagram-followers');
+            if (followersElement) {
+                followersElement.textContent = followersCount.toLocaleString();
+            } else {
+                console.warn('Element with ID "instagram-followers" not found');
+            }
+            
+            return followersCount;
+        } else {
+            console.error('Followers count not found in the response', data);
+            return null;
+        }
+    } catch (error) {
+        console.error('Error fetching Instagram followers:', error);
+        return null;
+    }
+}
 
 window.addEventListener('load', function () {
     type(textToType);
+    fetchInstagramFollowers();
 });
 
 document.addEventListener('DOMContentLoaded', function() {
