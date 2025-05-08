@@ -1,57 +1,27 @@
 window.addEventListener('load', function () {
+    // Calculate age
     var currentDate = new Date();
-
     var birthDate = new Date("2005-10-27");
-
     var age = currentDate.getFullYear() - birthDate.getFullYear();
-
     var birthDateThisYear = new Date(currentDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
 
     if (currentDate < birthDateThisYear) {
         age--;
     }
-
-    document.getElementById("age").textContent = age;
+    
+    // Update age in country element
+    const countryElement = document.getElementById('country');
+    if (countryElement) {
+        countryElement.textContent = age + ' років • Франція';
+    }
+    
+    // Fetch Instagram followers
+    fetchInstagramFollowers();
 });
-
 
 function restoreTitle() {
     var titleElement = document.getElementById('socialTitle');
     titleElement.innerHTML = '<h3> Соцмережі </h3>';
-}
-
-var currentDate = new Date();
-var birthDate = new Date("2005-10-27");
-var age = currentDate.getFullYear() - birthDate.getFullYear();
-var birthDateThisYear = new Date(currentDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
-
-if (currentDate < birthDateThisYear) {
-    age--;
-}
-
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
-
-var speed = 5;
-
-let textToType = [{text: 'Олег Любченко', elementId: 'name'},
-{text: 'UI/UX-Дизайнер', elementId: 'proffession'},
-{text: age + ' років • Франція', elementId: 'country'},
-{text: 'Мої вітання! Я роблю дизайн інтерфейсу для мобільних, десктопних та WEB застосунків. Окрім цього я також полюбляю монтувати відео, обробляти фото та малювати векторну графіку.', elementId: 'about'},];
-
-async function type(data){
-    for (element of data)
-    {
-        let index = 0;
-        let domElement = document.getElementById(element.elementId);
-        let len = element.text.length;
-        while (index < len) {
-            domElement.textContent += element.text.charAt(index);
-            await sleep(speed);
-            index++;
-        }
-    }
 }
 
 // Function to fetch Instagram followers count from Firestore
@@ -87,11 +57,6 @@ async function fetchInstagramFollowers() {
         return null;
     }
 }
-
-window.addEventListener('load', function () {
-    type(textToType);
-    fetchInstagramFollowers();
-});
 
 document.addEventListener('DOMContentLoaded', function() {
     var currentPhotoIndex = 1; // починаємо з першої фотографії
