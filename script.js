@@ -1,4 +1,13 @@
 window.addEventListener('load', function () {
+    displayAgeAndCountry();
+    fetchInstagramFollowers();
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    setupInstagramPhotoCarousel();
+});
+
+function displayAgeAndCountry() {
     var currentDate = new Date();
     var birthDate = new Date("2005-10-27");
     var age = currentDate.getFullYear() - birthDate.getFullYear();
@@ -7,14 +16,12 @@ window.addEventListener('load', function () {
     if (currentDate < birthDateThisYear) {
         age--;
     }
-    
+
     const countryElement = document.getElementById('country');
     if (countryElement) {
         countryElement.textContent = age + ' років • Франція';
     }
-    
-    fetchInstagramFollowers();
-});
+}
 
 function restoreTitle() {
     var titleElement = document.getElementById('socialTitle');
@@ -24,35 +31,31 @@ function restoreTitle() {
 async function fetchInstagramFollowers() {
     try {
         const response = await fetch('https://firestore.googleapis.com/v1/projects/liubquanti/databases/(default)/documents/media/instagram');
-        
         if (!response.ok) {
             throw new Error('Network response was not ok: ' + response.status);
         }
-        
         const data = await response.json();
-        
-        if (data && data.fields && data.fields.followers && data.fields.followers.integerValue) {
-            const followersCount = parseInt(data.fields.followers.integerValue);
-            
-            const followersElement = document.getElementById('instagram-followers');
-            if (followersElement) {
-                followersElement.textContent = followersCount.toLocaleString();
-            } else {
-                console.warn('Element with ID "instagram-followers" not found');
-            }
-            
-            return followersCount;
-        } else {
-            console.error('Followers count not found in the response', data);
-            return null;
-        }
+        updateInstagramFollowersUI(data);
     } catch (error) {
         console.error('Error fetching Instagram followers:', error);
-        return null;
     }
 }
 
-document.addEventListener('DOMContentLoaded', function() {
+function updateInstagramFollowersUI(data) {
+    if (data && data.fields && data.fields.followers && data.fields.followers.integerValue) {
+        const followersCount = parseInt(data.fields.followers.integerValue);
+        const followersElement = document.getElementById('instagram-followers');
+        if (followersElement) {
+            followersElement.textContent = followersCount.toLocaleString();
+        } else {
+            console.warn('Element with ID "instagram-followers" not found');
+        }
+    } else {
+        console.error('Followers count not found in the response', data);
+    }
+}
+
+function setupInstagramPhotoCarousel() {
     var currentPhotoIndex = 1;
     var totalPhotos = 3;
     var container = document.querySelector('.instagram-photos-container');
@@ -62,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
     function changePhoto(index) {
         var photos = container.querySelectorAll('.instagram-photos');
         photos.forEach(function(photo) {
-            photo.style.opacity = '0'; 
+            photo.style.opacity = '0';
         });
         setTimeout(function() {
             photos.forEach(function(photo) {
@@ -90,4 +93,4 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', nextPhoto);
 
     changePhoto(currentPhotoIndex);
-});
+}
