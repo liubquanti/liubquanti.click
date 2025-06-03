@@ -23,11 +23,6 @@ function displayAgeAndCountry() {
     }
 }
 
-function restoreTitle() {
-    var titleElement = document.getElementById('socialTitle');
-    titleElement.innerHTML = '<h3> Соцмережі </h3>';
-}
-
 async function fetchInstagramFollowers() {
     try {
         const response = await fetch('https://firestore.googleapis.com/v1/projects/liubquanti/databases/(default)/documents/media/instagram');
