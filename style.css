@@ -26,6 +26,42 @@ body {
     margin-top: 20px;
 }
 
+.tabs {
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    user-select: none;
+
+    -webkit-tap-highlight-color: transparent;
+}
+
+.tab .icons-tabler-outline {
+    vertical-align: middle;
+    transform: translateY(-1px);
+
+}
+
+.tab{
+    padding: 10px 10px;
+    border: 2px solid var(--border);
+    border-top-left-radius: 11px;
+    border-top-right-radius: 11px;
+    border-bottom: none;
+    background-color: var(--block);
+    margin-right: 5px;
+    text-decoration: none;
+    transition: background-color 0.5s ease;
+}
+
+.tab:hover {
+    background-color: var(--hover);
+}
+
+.tab-active {
+    background-color: var(--block) !important;
+}
+
 .header-block-banner {
     padding: 15px;
     border-top: 2px solid var(--border);
@@ -232,7 +268,13 @@ body {
     .header-block-text,
     .block-head,
     .block,
+    .tabs,
+    #tabs-container,
     .block-sub {
         width: 80%;
-}
     }
+
+    .tab-name {
+        display: none;
+    }
+}
