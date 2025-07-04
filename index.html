@@ -1,124 +1,107 @@
 <!DOCTYPE html>
 <html lang="uk">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/style.css">
-        <link rel="icon" href="/icons/pageico.png" type="image/x-icon">
-        <title>liubquanti • Олег Любченко</title>
-        <script src="script.js"></script>
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    </head>
-
-    <body>
-        <div class="navigation">
-            <a href="" class="navigation-link-on">Головна</a>
-            <a href="/activity/" class="navigation-link">Діяльність</a>
-            <a href="/education/" class="navigation-link">Освіта</a>
-            <a href="/other/" class="navigation-link">Інше</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>liubquanti</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="header-block-banner">
+    </div>
+    <div class="header-block-text">
+        <div id="avatar">
         </div>
-        <div class="banner">
-        </div>
-        <div class="profile">
-            <div class="avatar">
-
-            </div>
-            <name id="name">
-                Олег Любченко
-            </name>
-            <proffession id="proffession">
-                UI/UX-Дизайнер
-            </proffession>
-            <country id="country">
-                00 років • Франція
-            </country>
-            <about id="about">
-                Мої вітання! Я роблю дизайн інтерфейсу для мобільних, десктопних та WEB застосунків. Окрім цього я також полюбляю монтувати відео, обробляти фото та малювати векторну графіку.
-            </about>
-        </div>
-        <div class="social-block-container">
-            <div class="instagram-block">
-                <div class="instagram-block-label">
-                    <div class="instagram-block-icon">
-                    </div>
-                    <a href="https://www.instagram.com/liubquanti/" target="_blank" class="instagram-block-username">@liubquanti</a>
-                </div>
-                <div class="instagram-photos-container">
-                    <div id="prevButton" class="photo-change-button"><</div>
-                    <a href="https://www.instagram.com/p/C6HXBcMN_-Y/" target="_blank">
-                        <div class="instagram-photos photo1"></div>
-                    </a>
-                    <a href="https://www.instagram.com/p/CyHQtH9NhpX/" target="_blank">
-                        <div class="instagram-photos photo2"></div>
-                    </a>
-                    <a href="https://www.instagram.com/p/CtmWippN2wx/" target="_blank">
-                        <div class="instagram-photos photo3"></div>
-                    </a>
-                    <div id="nextButton" class="photo-change-button">></div>
-                </div>
-                <a href="https://www.instagram.com/liubquanti/" target="_blank">
-                    <div class="instagram-follow-button">
-                        Слідкувати
-                        &nbsp;
-                        <fol-number><span id="instagram-followers">000</span></fol-number>
-                    </div>
-                </a>
-            </div>
-            <div class="youtube-block">
-                <div class="youtube-block-label">
-                    <div class="youtube-block-icon">
-
-                    </div>
-                    <a href="https://www.youtube.com/@liubquanti" target="_blank" class="youtube-block-username">@liubquanti</a>
-                </div>
-                    <div class="youtube-iframe-container">
-                        <iframe src="https://www.youtube.com/embed/7odSuh0bbEM?si=H3ImPS-ZNTybXv5k" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen class="youtube-iframe"></iframe>
-                    </div>
-                <a href="https://www.youtube.com/@liubquanti" target="_blank">
-                    <div class="instagram-follow-button">
-                        Підписатися
-                        &nbsp;
-                        <fol-number>103</fol-number>
-                    </div>
-                </a>
-            </div>
-        </div>
-        <div class="block-4">
-            <h3>Соцмережі</h3>
-            <div class="social-button-parent-container">
-                <div class="social-button-container">
-                    <a class="social-button" href="https://www.instagram.com/liubquanti/" target="_blank">
-                        <img src="/icons/instagram.png" class="social-icon">
-                    </a>
-                    <a class="social-button" href="https://www.youtube.com/@liubquanti" target="_blank">
-                        <img src="/icons/youtube.png" class="social-icon">
-                    </a>
-                    <a class="social-button" href="https://t.me/liubquanti" target="_blank">
-                        <img src="/icons/telegram.png" class="social-icon">
-                    </a>
-                    <a class="social-button" href="https://www.figma.com/@liubquanti" target="_blank">
-                        <img src="/icons/figma.png" class="social-icon">
-                    </a>
-                    <a class="social-button" href="https://github.com/liubquanti" target="_blank">
-                        <img src="/icons/github.png" class="social-icon">
-                    </a>
-                    <a class="social-button" href="https://www.tiktok.com/@liubquanti" target="_blank">
-                        <img src="/icons/tiktok.png" class="social-icon">
-                    </a>
-                    <a class="social-button" href="https://steamcommunity.com/id/liubquanti" target="_blank">
-                        <img src="/icons/steam.png" class="social-icon">
-                    </a>
-                </div>
-            </div>   
+        <span id="name">
+            liubquanti
+        </span>
+        <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="currentColor"  class="icon icon-tabler icons-tabler-filled icon-tabler-rosette-discount-check"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M12.01 2.011a3.2 3.2 0 0 1 2.113 .797l.154 .145l.698 .698a1.2 1.2 0 0 0 .71 .341l.135 .008h1a3.2 3.2 0 0 1 3.195 3.018l.005 .182v1c0 .27 .092 .533 .258 .743l.09 .1l.697 .698a3.2 3.2 0 0 1 .147 4.382l-.145 .154l-.698 .698a1.2 1.2 0 0 0 -.341 .71l-.008 .135v1a3.2 3.2 0 0 1 -3.018 3.195l-.182 .005h-1a1.2 1.2 0 0 0 -.743 .258l-.1 .09l-.698 .697a3.2 3.2 0 0 1 -4.382 .147l-.154 -.145l-.698 -.698a1.2 1.2 0 0 0 -.71 -.341l-.135 -.008h-1a3.2 3.2 0 0 1 -3.195 -3.018l-.005 -.182v-1a1.2 1.2 0 0 0 -.258 -.743l-.09 -.1l-.697 -.698a3.2 3.2 0 0 1 -.147 -4.382l.145 -.154l.698 -.698a1.2 1.2 0 0 0 .341 -.71l.008 -.135v-1l.005 -.182a3.2 3.2 0 0 1 3.013 -3.013l.182 -.005h1a1.2 1.2 0 0 0 .743 -.258l.1 -.09l.698 -.697a3.2 3.2 0 0 1 2.269 -.944zm3.697 7.282a1 1 0 0 0 -1.414 0l-3.293 3.292l-1.293 -1.292l-.094 -.083a1 1 0 0 0 -1.32 1.497l2 2l.094 .083a1 1 0 0 0 1.32 -.083l4 -4l.083 -.094a1 1 0 0 0 -.083 -1.32z" /></svg>
+        <br>
+        <span id="profession">
+            UI/UX дизайнер
+        </span>
+        <br>
+        <span id="description">
+            Привіт, я - Олег і я обожнюю розробляти дизайни інтерфейсу та працювати з графікою.
+        </span>
+        <div id="skils">
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-adobe-photoshop"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12c0 -4.243 0 -6.364 1.318 -7.682s3.44 -1.318 7.682 -1.318s6.364 0 7.682 1.318s1.318 3.44 1.318 7.682s0 6.364 -1.318 7.682s-3.44 1.318 -7.682 1.318s-6.364 0 -7.682 -1.318s-1.318 -3.44 -1.318 -7.682" /><path d="M6.79 15.79v-3.79m0 0v-2.724c0 -.11 0 -.165 .004 -.211c.044 -.45 .4 -.806 .85 -.85c.046 -.004 .101 -.004 .211 -.004h1.303a1.895 1.895 0 1 1 0 3.789z" /><path d="M17.178 11.263c-.164 -.659 -.935 -1.158 -1.862 -1.158c-1.047 0 -1.895 .637 -1.895 1.421c0 .785 .848 1.421 1.895 1.421c1.046 0 1.895 .637 1.895 1.421c0 .785 -.849 1.421 -1.895 1.421c-.93 0 -1.704 -.502 -1.864 -1.165" /></svg>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-adobe-illustrator"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12c0 -4.243 0 -6.364 1.318 -7.682s3.44 -1.318 7.682 -1.318s6.364 0 7.682 1.318s1.318 3.44 1.318 7.682s0 6.364 -1.318 7.682s-3.44 1.318 -7.682 1.318s-6.364 0 -7.682 -1.318s-1.318 -3.44 -1.318 -7.682" /><path d="M12.947 15.79l-.82 -2.653m-4.864 2.652l.82 -2.652m0 0l.687 -2.218c.558 -1.806 .838 -2.708 1.335 -2.708c.498 0 .777 .902 1.336 2.708l.686 2.218m-4.043 0h4.043" /><path d="M15.789 15.789v-4.736" /><path d="M15.789 8.684v-.473" /></svg>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-adobe-premier"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M3 12c0 -4.243 0 -6.364 1.318 -7.682s3.44 -1.318 7.682 -1.318s6.364 0 7.682 1.318s1.318 3.44 1.318 7.682s0 6.364 -1.318 7.682s-3.44 1.318 -7.682 1.318s-6.364 0 -7.682 -1.318s-1.318 -3.44 -1.318 -7.682" /><path d="M7.263 15.79v-3.79m0 0v-3.248c0 -.335 .222 -.541 .542 -.541h1.353a1.895 1.895 0 1 1 0 3.789z" /><path d="M13.895 10.579v1.895m0 0v3.315m0 -3.315c.531 -.709 1.026 -1.592 1.894 -1.832q .22 -.062 .474 -.063" /></svg>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-figma"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" /><path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z" /><path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15" /></svg>
             <br>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-html5"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>
+            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-css3"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z" /><path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5" /></svg>
         </div>
-        <div class="map-block">
-            <div class="map-block-label">
-                <div class="map-block-icon">
-                </div>
-                <a href="https://uk.wikipedia.org/wiki/%D0%92%D1%96%D1%88%D1%96" target="_blank" class="map-block-username">Віші</a>
-            </div>
-            <iframe class="map" src="https://api.mapbox.com/styles/v1/liubquanti/cm3c2fv1500ng01pd8mrd0gs5.html?title=false&access_token=pk.eyJ1IjoibGl1YnF1YW50aSIsImEiOiJjbTNjMmRxOGgwaXA0MmtzNnQ3ejhucThwIn0.H40sEbMzIl9k1d--3_mlpg&zoomwheel=false#3.67/48.09/2.89" title="Site Map" style="border:none;"></iframe>            </div>
+    </div>
+    <div class="block-head">
+        <span class="block-title">
+            Соцмережі
+        </span>
+    </div>
+    <div class="block">
+        <div class="social-buttons-container">
+            <a class="social-button" href="https://t.me/liubquanti" target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-telegram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M15 10l-4 4l6 6l4 -16l-18 7l4 2l2 6l3 -4" /></svg>
+                <span class="social-name">
+                    Telegram
+                </span>
+                <span class="social-count">
+                    31
+                </span>
+            </a>
+            <a class="social-button" href="https://www.instagram.com/liubquanti/" target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-instagram"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 8a4 4 0 0 1 4 -4h8a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-8a4 4 0 0 1 -4 -4z" /><path d="M9 12a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" /><path d="M16.5 7.5v.01" /></svg>
+                <span class="social-name">
+                    Instagram
+                </span>
+                <span class="social-count">
+                    301
+                </span>
+            </a>
+            <a class="social-button" href="https://www.youtube.com/@liubquanti" target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-youtube"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M2 8a4 4 0 0 1 4 -4h12a4 4 0 0 1 4 4v8a4 4 0 0 1 -4 4h-12a4 4 0 0 1 -4 -4v-8z" /><path d="M10 9l5 3l-5 3z" /></svg>
+                <span class="social-name">
+                    Youtube
+                </span>
+                <span class="social-count">
+                    100
+                </span>
+            </a>
+            <a class="social-button" href="https://discord.gg/TYs8FjvzFf" target="_blank">
+                <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-discord"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M8 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M14 12a1 1 0 1 0 2 0a1 1 0 0 0 -2 0" /><path d="M15.5 17c0 1 1.5 3 2 3c1.5 0 2.833 -1.667 3.5 -3c.667 -1.667 .5 -5.833 -1.5 -11.5c-1.457 -1.015 -3 -1.34 -4.5 -1.5l-.972 1.923a11.913 11.913 0 0 0 -4.053 0l-.975 -1.923c-1.5 .16 -3.043 .485 -4.5 1.5c-2 5.667 -2.167 9.833 -1.5 11.5c.667 1.333 2 3 3.5 3c.5 0 2 -2 2 -3" /><path d="M7 16.5c3.5 1 6.5 1 10 0" /></svg>
+                <span class="social-name">
+                    Discord
+                </span>
+                <span class="social-count">
+                    40
+                </span>
+            </a>
         </div>
-    </body>
+    </div>
+    <div class="block-sub">
+        <a class="social-button social-button-no-icon" href="/social-media/">
+            <span class="social-name">
+                Всі соцмережі
+            </span>
+        </a>
+    </div>
+    <div class="block-head">
+        <span class="block-title">
+            Розробки
+        </span>
+    </div>
+    <div class="block">
+        <div class="projects-container" id="projects-container">
+        </div>
+    </div>
+    <div class="block-sub">
+        <a class="social-button social-button-no-icon" href="https://github.com/liubquanti" target="_blank">
+            <span class="social-name">
+                Інші розробки
+            </span>
+        </a>
+    </div>
+</body>
 </html>

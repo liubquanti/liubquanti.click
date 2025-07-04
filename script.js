@@ -1,91 +1,41 @@
-window.addEventListener('load', function () {
-    displayAgeAndCountry();
-    fetchInstagramFollowers();
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    setupInstagramPhotoCarousel();
-});
-
-function displayAgeAndCountry() {
-    var currentDate = new Date();
-    var birthDate = new Date("2005-10-27");
-    var age = currentDate.getFullYear() - birthDate.getFullYear();
-    var birthDateThisYear = new Date(currentDate.getFullYear(), birthDate.getMonth(), birthDate.getDate());
-
-    if (currentDate < birthDateThisYear) {
-        age--;
-    }
-
-    const countryElement = document.getElementById('country');
-    if (countryElement) {
-        countryElement.textContent = age + ' років • Франція';
-    }
-}
-
-async function fetchInstagramFollowers() {
+async function loadProjects() {
     try {
-        const response = await fetch('https://firestore.googleapis.com/v1/projects/liubquanti/databases/(default)/documents/media/instagram');
-        if (!response.ok) {
-            throw new Error('Network response was not ok: ' + response.status);
-        }
+        const response = await fetch('data.json');
         const data = await response.json();
-        updateInstagramFollowersUI(data);
-    } catch (error) {
-        console.error('Error fetching Instagram followers:', error);
-    }
-}
-
-function updateInstagramFollowersUI(data) {
-    if (data && data.fields && data.fields.followers && data.fields.followers.integerValue) {
-        const followersCount = parseInt(data.fields.followers.integerValue);
-        const followersElement = document.getElementById('instagram-followers');
-        if (followersElement) {
-            followersElement.textContent = followersCount.toLocaleString();
-        } else {
-            console.warn('Element with ID "instagram-followers" not found');
-        }
-    } else {
-        console.error('Followers count not found in the response', data);
-    }
-}
-
-function setupInstagramPhotoCarousel() {
-    var currentPhotoIndex = 1;
-    var totalPhotos = 3;
-    var container = document.querySelector('.instagram-photos-container');
-    var prevButton = document.getElementById('prevButton');
-    var nextButton = document.getElementById('nextButton');
-
-    function changePhoto(index) {
-        var photos = container.querySelectorAll('.instagram-photos');
-        photos.forEach(function(photo) {
-            photo.style.opacity = '0';
+        
+        const projectsContainer = document.getElementById('projects-container');
+        
+        data.projects.forEach(project => {
+            const projectElement = document.createElement('div');
+            projectElement.className = 'project-item';
+            
+            projectElement.innerHTML = `
+                <img class="project-banner" src="${project.banner}" alt="${project.name}">
+                <div class="project-info">
+                    <span class="project-name">${project.name}</span>
+                    <br>
+                    <span class="project-description">${project.description}</span>
+                    <div class="social-buttons-container">
+                        ${project.code ? `<a href="${project.code}" target="_blank" class="social-button">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-github"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5" /></svg>
+                            Код
+                        </a>` : ''}
+                        ${project.published ? `<a href="${project.published}" target="_blank" class="social-button">
+                            <svg  xmlns="http://www.w3.org/2000/svg"  width="24"  height="24"  viewBox="0 0 24 24"  fill="none"  stroke="currentColor"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-brand-google-play"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 3.71v16.58a.7 .7 0 0 0 1.05 .606l14.622 -8.42a.55 .55 0 0 0 0 -.953l-14.622 -8.419a.7 .7 0 0 0 -1.05 .607z" /><path d="M15 9l-10.5 11.5" /><path d="M4.5 3.5l10.5 11.5" /></svg>
+                            Продукт
+                        </a>` : ''}
+                    </div>
+                </div>
+            `;
+            
+            projectsContainer.appendChild(projectElement);
         });
-        setTimeout(function() {
-            photos.forEach(function(photo) {
-                photo.style.display = 'none';
-            });
-            var currentPhoto = container.querySelector('.photo' + index);
-            currentPhoto.style.display = 'block';
-            setTimeout(function() {
-                currentPhoto.style.opacity = '1';
-            }, 50);
-        }, 100);
+        
+    } catch (error) {
+        console.error('Error loading projects:', error);
+        const projectsContainer = document.getElementById('projects-container');
+        projectsContainer.innerHTML = '<p class="error-message">Failed to load projects. Please try again later.</p>';
     }
-
-    function prevPhoto() {
-        currentPhotoIndex = (currentPhotoIndex - 1 + totalPhotos) % totalPhotos || totalPhotos;
-        changePhoto(currentPhotoIndex);
-    }
-
-    function nextPhoto() {
-        currentPhotoIndex = (currentPhotoIndex % totalPhotos) + 1;
-        changePhoto(currentPhotoIndex);
-    }
-
-    prevButton.addEventListener('click', prevPhoto);
-    nextButton.addEventListener('click', nextPhoto);
-
-    changePhoto(currentPhotoIndex);
 }
+
+document.addEventListener('DOMContentLoaded', loadProjects);
