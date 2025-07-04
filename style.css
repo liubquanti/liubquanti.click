@@ -52,6 +52,9 @@ body {
     margin-right: 5px;
     text-decoration: none;
     transition: background-color 0.5s ease;
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 .tab:hover {
@@ -276,5 +279,17 @@ body {
 
     .tab-name {
         display: none;
+    }
+
+    .tab-active .tab-name {
+        display: inline;
+    }
+
+    
+}
+
+@media (max-width: 320px) {
+    .tab-name {
+        display: none !important;
     }
 }
