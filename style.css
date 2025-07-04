@@ -9,6 +9,11 @@
     --hover: #282828;
 }
 
+a {
+    color: var(--second-text);
+    text-decoration: none;
+}
+
 body {
     background-color: var(--background);
     color: var(--text);
@@ -163,6 +168,14 @@ body {
     margin-top: 10px;
 }
 
+.youtube-video {
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    margin-bottom: 10px;
+}
+
 .project-banner {
     width: 100%;
     border-radius: 11px;
@@ -178,6 +191,40 @@ body {
 .project-description {
     display: block;
     margin-bottom: 10px;
+}
+
+.education-document {
+    width: 100%;
+    aspect-ratio: 16 / 4;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    filter: opacity(0.2);
+    
+    transition: aspect-ratio 0.5s ease, filter 0.5s ease;
+}
+
+.education-document:hover {
+    aspect-ratio: 16 / 11.5;
+    filter: opacity(1);
+}
+
+.education-document-pre {
+    background-image: url(/photos/education/pre.jpeg);
+}
+
+.education-document-spec {
+    background-image: url(/photos/education/spec.png);
+}
+
+.education-document-full {
+    background-image: url(/photos/education/full.jpeg);
+}
+
+.education-document-base {
+    background-image: url(/photos/education/base.jpeg);
 }
 
 @media (max-width: 600px) {
