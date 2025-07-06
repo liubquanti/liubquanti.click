@@ -1,6 +1,6 @@
 async function loadProjects() {
     try {
-        const response = await fetch('data.json');
+        const response = await fetch('https://gist.githubusercontent.com/liubquanti/855a72c2f7e05d0f220a50abcd41ab6c/raw/liubquanti-click.json');
         const data = await response.json();
         
         const projectsContainer = document.getElementById('projects-container');

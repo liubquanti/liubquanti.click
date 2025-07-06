@@ -266,6 +266,80 @@ body {
     background-image: url(/photos/education/base.jpeg);
 }
 
+.game-favorite-cover {
+    width: 100%;
+    aspect-ratio: 20 / 9;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    background-image: url(/photos/games/wows-wide.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.game-favorite-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.game-favorite-name {
+    font-size: 16px;
+}
+
+.game-favorite-time {
+    font-size: 14px;
+    color: var(--second-text);
+}
+
+.game-favorite-stars {
+    width: min-content;
+    display: flex;
+    gap: 5px;
+    background-color: var(--hover);
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    padding: 5px;
+}
+
+.game-favorite-stats {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+.game-favorite-stat {
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-favorite-stat-name {
+    text-align: center;
+}
+
+.game-favorite-stat-value {
+    color: var(--second-text);
+}
+
+.game-cover {
+    width: 40%;
+    aspect-ratio: 9 / 13;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    background-size: cover;
+    background-position: center;
+}
+.game-cover-first {
+    background-image: url(/photos/games/forza.png);
+}
+
 @media (max-width: 600px) {
     .header-block-banner,
     .header-block-text,
