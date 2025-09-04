@@ -215,11 +215,17 @@ body {
     margin-bottom: 10px;
 }
 
-.project-banner {
-    width: 100%;
+.projects-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 10px;
+}
+
+.project-icon {
+    width: 90px;
     border-radius: 11px;
-    border: var(--border) 2px solid;
-    padding: 10px;
     box-sizing: border-box;
 }
 
@@ -251,7 +257,7 @@ body {
 }
 
 .education-document-pre {
-    background-image: url(/photos/education/pre.jpeg);
+    background-image: url(/photos/education/pre.png);
 }
 
 .education-document-spec {
@@ -259,11 +265,11 @@ body {
 }
 
 .education-document-full {
-    background-image: url(/photos/education/full.jpeg);
+    background-image: url(/photos/education/full.png);
 }
 
 .education-document-base {
-    background-image: url(/photos/education/base.jpeg);
+    background-image: url(/photos/education/base.png);
 }
 
 .game-favorite-cover {
