@@ -224,7 +224,7 @@ body {
 }
 
 .project-icon {
-    width: 90px;
+    width: 80px;
     border-radius: 11px;
     box-sizing: border-box;
 }
@@ -327,6 +327,15 @@ body {
         display: inline;
     }
 
+    .projects-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
+
+    .project-icon {
+        width: 30px;
+    }
     
 }
 
