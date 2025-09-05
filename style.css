@@ -272,78 +272,40 @@ body {
     background-image: url(/photos/education/base.png);
 }
 
-.game-favorite-cover {
-    width: 100%;
-    aspect-ratio: 20 / 9;
-    border-radius: 11px;
-    border: var(--border) 2px solid;
-    background-image: url(/photos/games/wows-wide.jpg);
-    background-size: cover;
-    background-position: center;
+.gear-item-name {
+    margin-top: 10px;
 }
 
-.game-favorite-info {
+.gear-item {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
-    margin-top: 10px;
+    align-items: center;
     margin-bottom: 10px;
 }
 
-.game-favorite-name {
+.gear-photo {
+    width: 120px;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    margin-top: 10px;
+}
+
+.gear-item-label {
+    margin-left: 15px;
+    width: 100%;
+}
+
+.gear-item-brand {
     font-size: 16px;
 }
 
-.game-favorite-time {
-    font-size: 14px;
+.gear-item-model {
     color: var(--second-text);
 }
 
-.game-favorite-stars {
-    width: min-content;
-    display: flex;
-    gap: 5px;
-    background-color: var(--hover);
-    border-radius: 11px;
-    border: var(--border) 2px solid;
-    padding: 5px;
-}
-
-.game-favorite-stats {
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-}
-
-.game-favorite-stat {
-    border-radius: 11px;
-    border: var(--border) 2px solid;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.game-favorite-stat-name {
-    text-align: center;
-}
-
-.game-favorite-stat-value {
+.gear-item-year {
     color: var(--second-text);
-}
-
-.game-cover {
-    width: 40%;
-    aspect-ratio: 9 / 13;
-    border-radius: 11px;
-    border: var(--border) 2px solid;
-    background-size: cover;
-    background-position: center;
-}
-.game-cover-first {
-    background-image: url(/photos/games/forza.png);
+    margin-bottom: 5px;
 }
 
 @media (max-width: 600px) {
