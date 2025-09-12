@@ -1,76 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset
-      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-
-<url>
-  <loc>https://liubquanti.click/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/activity/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/education/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/other/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/activity/customization/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/activity/gaming/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/activity/software/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/activity/animanga/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/gear/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/gear/computers/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/gear/gadgets/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/gear/periphery/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-<url>
-  <loc>https://liubquanti.click/gear/gaming/</loc>
-  <lastmod>2024-09-04T07:26:36+00:00</lastmod>
-  <priority>0.51</priority>
-</url>
-
-
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://liubquanti.click/</loc>
+  </url>
+  <url>
+    <loc>https://liubquanti.click/social-media/</loc>
+  </url>
 </urlset>

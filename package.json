@@ -1,0 +1,8 @@
+{
+  "devDependencies": {
+    "sitemap-generator-cli": "^7.5.0"
+  },
+  "scripts": {
+    "sitemap": "sitemap-generator https://liubquanti.click/ -o ./dist/sitemap.xml"
+  }
+}
