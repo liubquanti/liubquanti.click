@@ -308,6 +308,17 @@ body {
     margin-bottom: 5px;
 }
 
+.chronometer-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+.chronometer-label {
+    font-size: 16px;
+}
+
 @media (max-width: 600px) {
     .header-block-banner,
     .header-block-text,
