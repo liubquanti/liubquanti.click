@@ -319,6 +319,10 @@ body {
     font-size: 16px;
 }
 
+.chronometer-time {
+    margin-left: 3px;
+}
+
 @media (max-width: 600px) {
     .header-block-banner,
     .header-block-text,

@@ -1,22 +1,23 @@
-const BASE_TIME = 1130392800; // базова дата
+const BASE_TIME = 1130392800;
 
 function formatChrono(seconds) {
     const s = seconds % 60;
     const m = Math.floor(seconds / 60) % 60;
     const h = Math.floor(seconds / 3600) % 24;
 
-    let now = new Date(0);
+    let start = new Date(0);
     let end = new Date(seconds * 1000);
 
-    let years = end.getUTCFullYear() - now.getUTCFullYear();
-    let months = end.getUTCMonth() - now.getUTCMonth();
-    let days = end.getUTCDate() - now.getUTCDate();
+    let years = end.getUTCFullYear() - start.getUTCFullYear();
+    let months = end.getUTCMonth() - start.getUTCMonth();
+    let days = end.getUTCDate() - start.getUTCDate();
 
     if (days < 0) {
         months -= 1;
-        const prevMonth = new Date(end.getUTCFullYear(), end.getUTCMonth(), 0);
-        days += prevMonth.getDate();
+        let prevMonth = new Date(end.getUTCFullYear(), end.getUTCMonth(), 0).getUTCDate();
+        days += prevMonth;
     }
+
     if (months < 0) {
         years -= 1;
         months += 12;
@@ -27,6 +28,7 @@ function formatChrono(seconds) {
            `${String(m).padStart(2,'0')}:` +
            `${String(s).padStart(2,'0')}`;
 }
+
 
 function updateChronometers() {
     const now = Math.floor(Date.now() / 1000);
@@ -44,10 +46,8 @@ function updateChronometers() {
         let diff = endTime - start;
         if (diff < 0) diff = 0;
 
-        // Вивід часу
         el.querySelector('.chronometer-time').textContent = formatChrono(diff);
 
-        // Відсотки (якщо не головний)
         const percentEl = el.querySelector('.chronometer-percent');
         if (!isMain && percentEl) {
             const baseDiff = now - BASE_TIME;
