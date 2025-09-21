@@ -323,6 +323,14 @@ body {
     margin-left: 3px;
 }
 
+.spotify-playlist {
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    margin-bottom: 10px;
+    background-color: #535353;
+    width: 99%;
+}
+
 @media (max-width: 600px) {
     .header-block-banner,
     .header-block-text,
