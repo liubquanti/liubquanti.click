@@ -272,6 +272,22 @@ body {
     background-image: url(/photos/education/base.png);
 }
 
+.education-document-dup {
+    background-image: url(/photos/education/dup.png);
+}
+
+.education-document-dup:hover {
+    aspect-ratio: 16 / 11.3;
+}
+
+.education-document-eng {
+    background-image: url(/photos/education/eng.png);
+}
+
+.education-document-eng:hover {
+    aspect-ratio: 11.35 / 16;
+}
+
 .gear-item-name {
     margin-top: 10px;
 }
