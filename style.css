@@ -129,6 +129,13 @@ body {
     justify-content: center;
 }
 
+.moe-counter {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
 .social-buttons-container {
     display: flex;
     flex-direction: row;
