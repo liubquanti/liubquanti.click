@@ -1,0 +1,16 @@
+#avatar-portfolio {
+    height: 150px;
+    width: 150px;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    transform: translateY(-70px);
+    margin-bottom: -65px;
+    background-image: url(/photos/avatar.png);
+    background-size: cover;
+    background-position: center;
+    margin-inline: auto;
+}
+
+#top-placeholder {
+    height: 60px;
+}

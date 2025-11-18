@@ -26,6 +26,11 @@ body {
     margin-top: 20px;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    text-align: center;
+}
+
 .tabs {
     width: 500px;
     display: flex;
@@ -170,6 +175,45 @@ body {
 .social-button-no-icon {
     display: flex;
     justify-content: center;
+}
+
+.cover-button {
+    border: 2px solid var(--border);
+    padding: 10px;
+    border-radius: 11px;
+    text-decoration: none;
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-width: 180px;
+    box-sizing: border-box;
+    flex: 1 0 180px;
+    user-select: none;
+    
+    -webkit-tap-highlight-color: transparent;
+    
+    transition: background-color 0.5s ease;
+}
+
+.cover-button:hover {
+    background-color: var(--hover);
+}
+
+.cover-button-cover {
+    width: 45px;
+    height: 45px;
+    padding: 5px;
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.cover-button-subtext {
+    color: var(--second-text);
+}
+
+.cover-button-chevron {
+    margin-left: auto;
 }
 
 .icons-tabler-outline {
