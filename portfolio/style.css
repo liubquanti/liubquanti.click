@@ -1,16 +1,39 @@
 #avatar-portfolio {
-    height: 150px;
-    width: 150px;
+    height: 200px;
+    width: 200px;
     border-radius: 11px;
     border: var(--border) 2px solid;
     transform: translateY(-70px);
     margin-bottom: -65px;
-    background-image: url(/photos/avatar.png);
+    background-image: url(/photos/avatar-portfolio.png);
     background-size: cover;
     background-position: center;
+    background-color: var(--block);
     margin-inline: auto;
 }
 
 #top-placeholder {
     height: 60px;
+}
+
+.margin-15 {
+    margin-top: 15px;
+}
+
+.portfolio-badges {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.icon-tabler-portfolio-badge {
+    height: 40px;
+    width: 40px;
+}
+
+.block-head-main {
+    background-image: url(/photos/hearts.png);
+    background-size: cover;
+    background-position: center;
 }
