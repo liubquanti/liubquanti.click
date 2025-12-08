@@ -50,3 +50,35 @@
     border-radius: 8px;
     margin-bottom: 8px;
 }
+
+.portfolio-lang {
+    height: 10px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--second-text);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-lang-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.portfolio-lang-lvl {
+    height: 10px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--second-text);
+}
+
+.portfolio-lang-nolvl {
+    height: 10px;
+    width: 100%;
+    border-radius: 8px;
+    background-color: var(--hover);
+}
