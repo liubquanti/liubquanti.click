@@ -112,3 +112,13 @@
     font-weight: bold;
     color: var(--text);
 }
+
+.formation-banner {
+    width: 100%;
+    border-radius: 8px;
+    border: 2px solid var(--border);
+    aspect-ratio: 21 / 9;
+    object-fit: cover;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
