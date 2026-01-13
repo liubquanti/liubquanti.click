@@ -185,3 +185,17 @@
     white-space: nowrap;
     overflow: hidden;
 }
+
+.avatar-project {
+    height: 200px;
+    width: 200px;
+    border-radius: 11px;
+    border: var(--border) 2px solid;
+    transform: translateY(-70px);
+    margin-bottom: -65px;
+    background-color: var(--block);
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
