@@ -20,6 +20,15 @@
     height: 60px;
 }
 
+.block-back {
+    padding: 15px;
+    border: 2px solid var(--border);
+    background-color: var(--block);
+    border-radius: 11px;
+    margin-bottom: 10px;
+    width: 500px;
+}
+
 .main-title {
     width: 100%;
     text-align: center;
