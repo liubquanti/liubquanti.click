@@ -215,3 +215,9 @@
     border: 2px solid var(--border);
     object-fit: cover;
 }
+
+@media (max-width: 600px) {
+    .block-back {
+        width: 80%;
+    }
+}
